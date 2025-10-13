@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}About - Nike Export{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="text-center mb-5">
+                <h1 class="display-4">About Nike Export Web App</h1>
+                <p class="lead">Automated document processing for Nike export operations</p>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="h4 mb-3">🚀 What is Nike Export Web App?</h2>
+                    <p>Nike Export Web App is a comprehensive solution designed to streamline and automate the processing of Nike export documents. It transforms manual document handling into an efficient, automated workflow.</p>
+                    
+                    <h3 class="h5 mt-4 mb-3">Key Features</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> PDF data extraction</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Excel template management</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Batch processing</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Real-time tracking</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Multiple CO formats</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> RESTful API</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Responsive design</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Error handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="h4 mb-3">🛠️ How It Works</h2>
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="fas fa-upload fa-2x"></i>
+                            </div>
+                            <h5 class="mt-3">1. Upload</h5>
+                            <p class="text-muted">Upload your Nike export documents (PDF invoices, Excel packing lists, bookings)</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="fas fa-cogs fa-2x"></i>
+                            </div>
+                            <h5 class="mt-3">2. Process</h5>
+                            <p class="text-muted">Automatic data extraction and template population using AI-powered algorithms</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="fas fa-download fa-2x"></i>
+                            </div>
+                            <h5 class="mt-3">3. Export</h5>
+                            <p class="text-muted">Download generated certificates of origin in Excel or PDF format</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="h4 mb-3">📋 Supported Documents</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Input Documents</h5>
+                            <ul>
+                                <li>Nike Invoice PDFs</li>
+                                <li>Packing List Excel files</li>
+                                <li>Booking Excel files</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Output Formats</h5>
+                            <ul>
+                                <li>CO-FORM A (ASEAN)</li>
+                                <li>CO-FORM E (Thailand)</li>
+                                <li>CO-FORM EVFTA (EU-Vietnam)</li>
+                                <li>CO-FORM CPTPP (Pacific)</li>
+                                <li>CO-FORM RCEP (Regional)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="h4 mb-3">⚡ Performance</h2>
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <h3 class="text-primary">99.5%</h3>
+                            <p class="text-muted">Accuracy Rate</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3 class="text-primary">< 5s</h3>
+                            <p class="text-muted">Processing Time</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3 class="text-primary">24/7</h3>
+                            <p class="text-muted">Availability</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3 class="text-primary">100+</h3>
+                            <p class="text-muted">Docs per Batch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="h4 mb-3">🔧 Technical Specifications</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Backend</h5>
+                            <ul class="list-unstyled">
+                                <li><strong>Framework:</strong> Flask (Python)</li>
+                                <li><strong>Database:</strong> SQLite</li>
+                                <li><strong>PDF Processing:</strong> pdfplumber</li>
+                                <li><strong>Excel Handling:</strong> openpyxl</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Frontend</h5>
+                            <ul class="list-unstyled">
+                                <li><strong>UI Framework:</strong> Bootstrap 5</li>
+                                <li><strong>JavaScript:</strong> Vanilla JS</li>
+                                <li><strong>Icons:</strong> Font Awesome</li>
+                                <li><strong>Templates:</strong> Jinja2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="h4 mb-3">📞 Support & Contact</h2>
+                    <p>Need help or have questions about Nike Export Web App?</p>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <a href="mailto:support@nikeexport.com" class="btn btn-outline-primary">
+                                <i class="fas fa-envelope me-2"></i>Email Support
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="{{ url_for('main.upload') }}" class="btn btn-primary">
+                                <i class="fas fa-rocket me-2"></i>Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

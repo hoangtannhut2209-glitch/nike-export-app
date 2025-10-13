@@ -1,0 +1,2925 @@
+{% extends "base.html" %}
+
+{% block title %}{{ template.display_name }} - Nike Export{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('templates.list_templates') }}">Templates</a></li>
+                    <li class="breadcrumb-item active">{{ template.display_name }}</li>
+                </ol>
+            </nav>
+            <h1 class="h3 mb-4">📄 {{ template.display_name }}</h1>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Template Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong>Name:</strong> {{ template.display_name }}</p>
+                            <p><strong>File:</strong> {{ template.filename }}</p>
+                            <p><strong>Sheet:</strong> {{ template.sheet_name }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Type:</strong> Nike Form</p>
+                            <p><strong>Status:</strong> <span class="badge bg-success">Valid</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <a href="{{ url_for('templates.download_original_template', template_name=template.display_name) }}" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Template
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+                </div>                    <li class="breadcrumb-item"><a href="{{ url_for('templates.list_templates') }}">Templates</a></li><div class="container-fluid">
+
+                <div class="card-body">
+
+                    <div class="row">                    <li class="breadcrumb-item active">{{ template.display_name }}</li>
+
+                        <div class="col-md-6">
+
+                            <p><strong>Name:</strong> {{ template.display_name }}</p>                </ol>    <div class="row">
+
+                            <p><strong>File:</strong> {{ template.filename }}</p>
+
+                            <p><strong>Sheet:</strong> {{ template.sheet_name }}</p>            </nav>
+
+                        </div>
+
+                        <div class="col-md-6">                    <div class="col-12">
+
+                            <p><strong>Type:</strong> Nike Form</p>
+
+                            <p><strong>Status:</strong> <span class="badge bg-success">Valid</span></p>            <h1 class="h3 mb-4">📄 {{ template.display_name }}</h1>
+
+                        </div>
+
+                    </div>            <!-- Header -->{% block content %}{% block title %}{{ template.display_name }} - Nike Export{% endblock %}
+
+                    
+
+                    <div class="mt-3">            <div class="card">
+
+                        <a href="{{ url_for('templates.download_original_template', template_name=template.display_name) }}" 
+
+                           class="btn btn-primary">                <div class="card-header">            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                            <i class="fas fa-download"></i> Download Template
+
+                        </a>                    <h5 class="card-title mb-0">Template Information</h5>
+
+                    </div>
+
+                </div>                </div>                <div><div class="container-fluid">
+
+            </div>
+
+        </div>                <div class="card-body">
+
+    </div>
+
+</div>                    <div class="row">                    <nav aria-label="breadcrumb">
+
+{% endblock %}
+                        <div class="col-md-6">
+
+                            <p><strong>Name:</strong> {{ template.display_name }}</p>                        <ol class="breadcrumb">    <div class="row">
+
+                            <p><strong>File:</strong> {{ template.filename }}</p>
+
+                            <p><strong>Sheet:</strong> {{ template.sheet_name }}</p>                            <li class="breadcrumb-item"><a href="{{ url_for('templates.list_templates') }}">Templates</a></li>
+
+                        </div>
+
+                        <div class="col-md-6">                            <li class="breadcrumb-item active">{{ template.display_name }}</li>        <div class="col-12">
+
+                            <p><strong>Type:</strong> Nike Form</p>
+
+                            <p><strong>Status:</strong> <span class="badge bg-success">Valid</span></p>                        </ol>
+
+                        </div>
+
+                    </div>                    </nav>            <div class="d-flex justify-content-between align-items-center mb-4">{% block head %}{% block title %}{{ template.display_name }} - Nike Export{% endblock %}{% block title %}{{ template.display_name }} - Nike Export{% endblock %}
+
+                    
+
+                    <div class="mt-3">                    <h1 class="h3">📄 {{ template.display_name }}</h1>
+
+                        <a href="{{ url_for('templates.download_original_template', template_name=template.display_name) }}" 
+
+                           class="btn btn-primary">                </div>                <h1 class="h3">📄 {{ template.display_name }}</h1>
+
+                            <i class="fas fa-download"></i> Download Template
+
+                        </a>                <div>
+
+                    </div>
+
+                </div>                    <a href="{{ url_for('templates.download_original_template', template_name=template.display_name) }}"                 <a href="{{ url_for('templates.list_templates') }}" class="btn btn-outline-secondary"><style>
+
+            </div>
+
+        </div>                       class="btn btn-outline-primary me-2">
+
+    </div>
+
+</div>                        <i class="fas fa-download"></i> Download Template                    <i class="fas fa-arrow-left me-2"></i>Back to Templates
+
+{% endblock %}
+                    </a>
+
+                    <button class="btn btn-primary" onclick="showGenerateModal()">                </a>    .template-header {
+
+                        <i class="fas fa-plus"></i> Generate Form
+
+                    </button>            </div>
+
+                </div>
+
+            </div>        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+
+
+
+            <!-- Template Info Card -->            <div class="row">
+
+            <div class="card mb-4">
+
+                <div class="card-header">                <!-- Template Info -->        color: white;{% block head %}{% block head %}
+
+                    <h5 class="card-title mb-0">Template Information</h5>
+
+                </div>                <div class="col-md-8">
+
+                <div class="card-body">
+
+                    <div class="row">                    <div class="card">        padding: 2rem 0;
+
+                        <div class="col-md-6">
+
+                            <table class="table table-sm">                        <div class="card-header">
+
+                                <tr>
+
+                                    <td><strong>Name:</strong></td>                            <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Template Information</h5>        margin-bottom: 2rem;<style><style>
+
+                                    <td>{{ template.display_name }}</td>
+
+                                </tr>                        </div>
+
+                                <tr>
+
+                                    <td><strong>File:</strong></td>                        <div class="card-body">        border-radius: 15px;
+
+                                    <td>{{ template.filename }}</td>
+
+                                </tr>                            <table class="table table-borderless">
+
+                                <tr>
+
+                                    <td><strong>Sheet:</strong></td>                                <tr>    }    .template-header {    .template-header {
+
+                                    <td>{{ template.sheet_name }}</td>
+
+                                </tr>                                    <td><strong>Filename:</strong></td>
+
+                                <tr>
+
+                                    <td><strong>Type:</strong></td>                                    <td>{{ template.name }}</td>    
+
+                                    <td>
+
+                                        <span class="badge bg-primary">Nike Form</span>                                </tr>
+
+                                    </td>
+
+                                </tr>                                <tr>    .detail-card {        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+
+                            </table>
+
+                        </div>                                    <td><strong>Type:</strong></td>
+
+                        <div class="col-md-6">
+
+                            <table class="table table-sm">                                    <td>{{ template.type if template.type else 'Form Template' }}</td>        border: none;
+
+                                <tr>
+
+                                    <td><strong>Sheets:</strong></td>                                </tr>
+
+                                    <td>{{ template.sheets|length }}</td>
+
+                                </tr>                                <tr>        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);        color: white;        color: white;
+
+                                <tr>
+
+                                    <td><strong>Size:</strong></td>                                    <td><strong>Last Modified:</strong></td>
+
+                                    <td>{{ "%.1f"|format(template.size_mb) }} MB</td>
+
+                                </tr>                                    <td>{{ template.last_modified.strftime('%Y-%m-%d %H:%M:%S') if template.last_modified else 'Unknown' }}</td>        border-radius: 15px;
+
+                                <tr>
+
+                                    <td><strong>Last Modified:</strong></td>                                </tr>
+
+                                    <td>{{ template.last_modified.strftime('%d/%m/%Y %H:%M') }}</td>
+
+                                </tr>                                <tr>        margin-bottom: 2rem;        padding: 2rem 0;        padding: 2rem 0;
+
+                                <tr>
+
+                                    <td><strong>Status:</strong></td>                                    <td><strong>File Size:</strong></td>
+
+                                    <td>
+
+                                        <span class="badge bg-success">Valid</span>                                    <td>{{ "%.2f KB"|format(template.size / 1024) if template.size else 'Unknown' }}</td>    }
+
+                                    </td>
+
+                                </tr>                                </tr>
+
+                            </table>
+
+                        </div>                                {% if template.sheets %}            margin-bottom: 2rem;        margin-bottom: 2rem;
+
+                    </div>
+
+                </div>                                <tr>
+
+            </div>
+
+                                    <td><strong>Sheets:</strong></td>    .action-card {
+
+            <!-- Template Preview -->
+
+            <div class="card">                                    <td>{{ template.sheets|length }} sheet(s)</td>
+
+                <div class="card-header d-flex justify-content-between align-items-center">
+
+                    <h5 class="card-title mb-0">Template Preview</h5>                                </tr>        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);        border-radius: 15px;        border-radius: 15px;
+
+                    <button class="btn btn-outline-secondary btn-sm" onclick="refreshPreview()">
+
+                        <i class="fas fa-sync-alt"></i> Refresh                                {% endif %}
+
+                    </button>
+
+                </div>                                {% if template.placeholders %}        border: none;
+
+                <div class="card-body">
+
+                    <div id="template-preview" class="table-responsive">                                <tr>
+
+                        <div class="text-center py-4">
+
+                            <div class="spinner-border text-primary" role="status">                                    <td><strong>Placeholders:</strong></td>        border-radius: 15px;    }    }
+
+                                <span class="visually-hidden">Loading...</span>
+
+                            </div>                                    <td>{{ template.placeholders|length }} field(s)</td>
+
+                            <p class="mt-2">Loading template preview...</p>
+
+                        </div>                                </tr>        position: sticky;
+
+                    </div>
+
+                </div>                                {% endif %}
+
+            </div>
+
+        </div>                            </table>        top: 2rem;        
+
+    </div>
+
+</div>                        </div>
+
+
+
+<!-- Generate Modal -->                    </div>    }
+
+<div class="modal fade" id="generateModal" tabindex="-1">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-header">                    {% if template.placeholders %}        .detail-card {    .detail-card {
+
+                <h5 class="modal-title">Generate {{ template.display_name }}</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>                    <div class="card mt-4">
+
+            </div>
+
+            <div class="modal-body">                        <div class="card-header">    .info-row {
+
+                <form id="generateForm">
+
+                    <div class="mb-3">                            <h5 class="mb-0"><i class="fas fa-tags me-2"></i>Available Placeholders</h5>
+
+                        <label class="form-label">Invoice Number (Optional)</label>
+
+                        <input type="text" class="form-control" name="invoice_number"                         </div>        display: flex;        border: none;        border: none;
+
+                               placeholder="Enter invoice number to auto-fill data">
+
+                    </div>                        <div class="card-body">
+
+                    <div class="mb-3">
+
+                        <label class="form-label">Custom Data (JSON)</label>                            <div class="row">        align-items: center;
+
+                        <textarea class="form-control" name="custom_data" rows="10" 
+
+                                  placeholder='{"inv": "INV-001", "date": "13/10/2025", "po": "PO-123", ...}'></textarea>                                {% for placeholder in template.placeholders %}
+
+                        <small class="form-text text-muted">Optional: Override or add custom field values</small>
+
+                    </div>                                <div class="col-md-6 col-lg-4 mb-2">        padding: 0.75rem 0;        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+                </form>
+
+            </div>                                    <span class="badge bg-primary">{{{ placeholder }}}</span>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>                                </div>        border-bottom: 1px solid #e9ecef;
+
+                <button type="button" class="btn btn-primary" onclick="generateTemplate()">Generate</button>
+
+            </div>                                {% endfor %}
+
+        </div>
+
+    </div>                            </div>    }        border-radius: 15px;        border-radius: 15px;
+
+</div>
+
+                        </div>
+
+<script>
+
+// Load template preview when page loads                    </div>    
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    loadTemplatePreview();                    {% endif %}
+
+});
+
+                </div>    .info-icon {        margin-bottom: 2rem;        margin-bottom: 2rem;
+
+function loadTemplatePreview() {
+
+    const previewDiv = document.getElementById('template-preview');
+
+    
+
+    fetch(`/templates/preview/{{ template.display_name }}`)                <!-- Actions -->        width: 20px;
+
+        .then(response => response.json())
+
+        .then(data => {                <div class="col-md-4">
+
+            if (data.success) {
+
+                renderTemplatePreview(data);                    <div class="card">        height: 20px;    }    }
+
+            } else {
+
+                previewDiv.innerHTML = `                        <div class="card-header">
+
+                    <div class="alert alert-warning">
+
+                        <i class="fas fa-exclamation-triangle"></i>                            <h5 class="mb-0"><i class="fas fa-tools me-2"></i>Actions</h5>        margin-right: 1rem;
+
+                        Preview not available: ${data.message}
+
+                    </div>                        </div>
+
+                `;
+
+            }                        <div class="card-body">        flex-shrink: 0;        
+
+        })
+
+        .catch(error => {                            <div class="d-grid gap-2">
+
+            console.error('Preview error:', error);
+
+            previewDiv.innerHTML = `                                <button type="button" class="btn btn-info" onclick="previewTemplate()">    }
+
+                <div class="alert alert-danger">
+
+                    <i class="fas fa-times"></i>                                    <i class="fas fa-eye me-2"></i>Preview Template
+
+                    Failed to load preview
+
+                </div>                                </button>        .action-card {    .action-card {
+
+            `;
+
+        });                                
+
+}
+
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#fillTemplateModal">    .info-label {
+
+function renderTemplatePreview(data) {
+
+    const previewDiv = document.getElementById('template-preview');                                    <i class="fas fa-edit me-2"></i>Fill Template
+
+    
+
+    let html = `                                </button>        font-weight: 600;        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+
+        <div class="mb-3">
+
+            <small class="text-muted">                                
+
+                Showing ${data.total_rows} rows × ${data.total_cols} columns from sheet "${data.sheet_name}"
+
+            </small>                                <a href="{{ url_for('templates.download_original_template', template_name=template.name) }}" class="btn btn-outline-info">        color: #495057;
+
+        </div>
+
+        <table class="table table-sm table-bordered">                                    <i class="fas fa-download me-2"></i>Download Original
+
+    `;
+
+                                    </a>        min-width: 120px;        border: none;        border: none;
+
+    data.preview_data.forEach((row, rowIndex) => {
+
+        html += '<tr>';                            </div>
+
+        row.forEach((cell, colIndex) => {
+
+            const cellClass = cell.is_placeholder ? 'bg-warning bg-opacity-25' : '';                        </div>    }
+
+            const fontWeight = cell.style.font_bold ? 'fw-bold' : '';
+
+            const border = cell.style.border ? 'border-2' : '';                    </div>
+
+            
+
+            html += `            border-radius: 15px;        border-radius: 15px;
+
+                <td class="${cellClass} ${fontWeight} ${border}" title="${cell.address}">
+
+                    ${cell.value || ''}                    {% if errors or warnings %}
+
+                </td>
+
+            `;                    <div class="card mt-4">    .info-value {
+
+        });
+
+        html += '</tr>';                        <div class="card-header">
+
+    });
+
+                                <h5 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Validation</h5>        color: #6c757d;        position: sticky;        position: sticky;
+
+    html += '</table>';
+
+                            </div>
+
+    if (data.preview_data.some(row => row.some(cell => cell.is_placeholder))) {
+
+        html += `                        <div class="card-body">        flex-grow: 1;
+
+            <div class="alert alert-info mt-3">
+
+                <i class="fas fa-info-circle"></i>                            {% if errors %}
+
+                <strong>Placeholders found:</strong> Yellow cells contain {placeholder} values that will be replaced when generating forms.
+
+            </div>                            <div class="alert alert-danger">    }        top: 2rem;        top: 2rem;
+
+        `;
+
+    }                                <h6>Errors:</h6>
+
+    
+
+    previewDiv.innerHTML = html;                                <ul class="mb-0">    
+
+}
+
+                                    {% for error in errors %}
+
+function refreshPreview() {
+
+    loadTemplatePreview();                                    <li>{{ error }}</li>    .placeholder-item {    }    }
+
+}
+
+                                    {% endfor %}
+
+function showGenerateModal() {
+
+    const modal = new bootstrap.Modal(document.getElementById('generateModal'));                                </ul>        display: inline-block;
+
+    modal.show();
+
+}                            </div>
+
+
+
+function generateTemplate() {                            {% endif %}        background: linear-gradient(45deg, #e74c3c, #c0392b);        
+
+    const form = document.getElementById('generateForm');
+
+    const formData = new FormData(form);                            
+
+    
+
+    const data = {                            {% if warnings %}        color: white;
+
+        template_name: '{{ template.display_name }}',
+
+        invoice_number: formData.get('invoice_number'),                            <div class="alert alert-warning">
+
+        data: {}
+
+    };                                <h6>Warnings:</h6>        padding: 0.25rem 0.75rem;    .info-row {    .action-btn {
+
+    
+
+    // Parse custom data JSON if provided                                <ul class="mb-0">
+
+    const customDataText = formData.get('custom_data');
+
+    if (customDataText && customDataText.trim()) {                                    {% for warning in warnings %}        border-radius: 15px;
+
+        try {
+
+            data.data = JSON.parse(customDataText);                                    <li>{{ warning }}</li>
+
+        } catch (e) {
+
+            alert('Invalid JSON format in custom data');                                    {% endfor %}        font-size: 0.8rem;        display: flex;        border-radius: 10px;
+
+            return;
+
+        }                                </ul>
+
+    }
+
+                                </div>        margin: 0.25rem;
+
+    // Show loading
+
+    const generateBtn = event.target;                            {% endif %}
+
+    const originalText = generateBtn.textContent;
+
+    generateBtn.disabled = true;                        </div>        font-weight: 500;        align-items: center;        font-weight: 500;
+
+    generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+
+                        </div>
+
+    fetch('/templates/api/generate', {
+
+        method: 'POST',                    {% endif %}    }
+
+        headers: {
+
+            'Content-Type': 'application/json'                </div>
+
+        },
+
+        body: JSON.stringify(data)            </div></style>        padding: 0.75rem 0;        padding: 0.75rem 1.5rem;
+
+    })
+
+    .then(response => response.json())        </div>
+
+    .then(result => {
+
+        if (result.success) {    </div>{% endblock %}
+
+            alert('Template generated successfully!');
+
+            // Close modal</div>
+
+            bootstrap.Modal.getInstance(document.getElementById('generateModal')).hide();
+
+            // Optionally download the file        border-bottom: 1px solid #e9ecef;        margin-bottom: 0.75rem;
+
+            if (result.download_url) {
+
+                window.location.href = result.download_url;<!-- Fill Template Modal -->
+
+            }
+
+        } else {<div class="modal fade" id="fillTemplateModal" tabindex="-1">{% block content %}
+
+            alert('Generation failed: ' + result.message);
+
+        }    <div class="modal-dialog modal-lg">
+
+    })
+
+    .catch(error => {        <div class="modal-content"><!-- Template Header -->    }        transition: all 0.3s ease;
+
+        console.error('Generation error:', error);
+
+        alert('Generation failed');            <div class="modal-header">
+
+    })
+
+    .finally(() => {                <h5 class="modal-title">Fill Template Data</h5><div class="template-header">
+
+        generateBtn.disabled = false;
+
+        generateBtn.innerHTML = originalText;                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+    });
+
+}            </div>    <div class="container-fluid">            text-decoration: none;
+
+</script>
+
+{% endblock %}            <div class="modal-body">
+
+                <form id="fillTemplateForm">        <div class="row align-items-center">
+
+                    <div class="row" id="placeholderFields">
+
+                        <div class="col-12 text-center">            <div class="col-md-8">    .info-icon {        display: block;
+
+                            <div class="spinner-border" role="status">
+
+                                <span class="visually-hidden">Loading...</span>                <div class="d-flex align-items-center mb-2">
+
+                            </div>
+
+                        </div>                    <i class="fas fa-file-excel text-white me-3" style="font-size: 2.5rem;"></i>        width: 20px;        text-align: center;
+
+                    </div>
+
+                </form>                    <h1 class="mb-0 fs-2">{{ template.display_name }}</h1>
+
+            </div>
+
+            <div class="modal-footer">                </div>        height: 20px;    }
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+
+                <button type="button" class="btn btn-success" onclick="fillTemplate()">Fill & Download</button>                <p class="mb-0 fs-5 opacity-75">Nike Export Template - {{ template.type if template.type else 'Form Template' }}</p>
+
+            </div>
+
+        </div>            </div>        margin-right: 1rem;    
+
+    </div>
+
+</div>            <div class="col-md-4 text-end">
+
+
+
+<!-- Preview Modal -->                <a href="{{ url_for('templates.list_templates') }}" class="btn btn-light btn-lg">        flex-shrink: 0;    .btn-preview {
+
+<div class="modal fade" id="previewModal" tabindex="-1">
+
+    <div class="modal-dialog modal-xl">                    <i class="fas fa-arrow-left me-2"></i>
+
+        <div class="modal-content">
+
+            <div class="modal-header">                    Quay lại    }        background: linear-gradient(45deg, #3498db, #2980b9);
+
+                <h5 class="modal-title">Template Preview</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>                </a>
+
+            </div>
+
+            <div class="modal-body">            </div>            border: none;
+
+                <div id="previewContent">
+
+                    <div class="text-center">        </div>
+
+                        <div class="spinner-border" role="status">
+
+                            <span class="visually-hidden">Loading...</span>    </div>    .info-label {        color: white;
+
+                        </div>
+
+                    </div></div>
+
+                </div>
+
+            </div>        font-weight: 600;    }
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button><div class="container-fluid">
+
+            </div>
+
+        </div>    <div class="row">        color: #495057;    
+
+    </div>
+
+</div>        <!-- Template Details -->
+
+
+
+<script>        <div class="col-xl-8">        min-width: 120px;    .btn-preview:hover {
+
+$(document).ready(function() {
+
+    console.log('Template detail page loaded');            <!-- Basic Info -->
+
+});
+
+            <div class="card detail-card">    }        background: linear-gradient(45deg, #2980b9, #1f618d);
+
+function previewTemplate() {
+
+    $('#previewModal').modal('show');                <div class="card-header">
+
+    const templateName = '{{ template.display_name }}';
+
+                        <h5 class="card-title mb-0">            color: white;
+
+    $.get(`/templates/preview/${encodeURIComponent(templateName)}`)
+
+        .done(function(data) {                        <i class="fas fa-info-circle me-2"></i>Template Information
+
+            if (data.success) {
+
+                let html = '<div class="table-responsive"><table class="table table-sm table-bordered">';                    </h5>    .info-value {        transform: translateY(-2px);
+
+                data.preview_data.forEach(function(row) {
+
+                    html += '<tr>';                </div>
+
+                    row.forEach(function(cell) {
+
+                        let cellClass = cell.is_placeholder ? 'table-warning' : '';                <div class="card-body">        color: #6c757d;    }
+
+                        html += `<td class="${cellClass}">${cell.value || ''}</td>`;
+
+                    });                    <div class="info-row">
+
+                    html += '</tr>';
+
+                });                        <i class="fas fa-file info-icon text-primary"></i>        flex-grow: 1;    
+
+                html += '</table></div>';
+
+                $('#previewContent').html(html);                        <span class="info-label">Filename:</span>
+
+            } else {
+
+                $('#previewContent').html(`<div class="alert alert-danger">${data.message}</div>`);                        <span class="info-value">{{ template.name }}</span>    }    .btn-fill {
+
+            }
+
+        })                    </div>
+
+        .fail(function() {
+
+            $('#previewContent').html('<div class="alert alert-danger">Failed to load preview</div>');                    <div class="info-row">            background: linear-gradient(45deg, #27ae60, #219a52);
+
+        });
+
+}                        <i class="fas fa-calendar info-icon text-success"></i>
+
+
+
+$('#fillTemplateModal').on('show.bs.modal', function () {                        <span class="info-label">Last Modified:</span>    .placeholder-item {        border: none;
+
+    const templateName = '{{ template.name }}';
+
+                            <span class="info-value">{{ template.last_modified.strftime('%Y-%m-%d %H:%M:%S') if template.last_modified else 'Unknown' }}</span>
+
+    $.get(`/templates/api/${templateName}/placeholders`)
+
+        .done(function(data) {                    </div>        display: inline-block;        color: white;
+
+            let html = '';
+
+            if (data.placeholders && data.placeholders.length > 0) {                    <div class="info-row">
+
+                data.placeholders.forEach(function(placeholder) {
+
+                    html += `                        <i class="fas fa-weight info-icon text-warning"></i>        background: linear-gradient(45deg, #e74c3c, #c0392b);    }
+
+                        <div class="col-md-6 mb-3">
+
+                            <label for="field_${placeholder}" class="form-label">${placeholder}</label>                        <span class="info-label">File Size:</span>
+
+                            <input type="text" class="form-control" id="field_${placeholder}" name="${placeholder}">
+
+                        </div>                        <span class="info-value">{{ "%.2f KB"|format(template.size / 1024) if template.size else 'Unknown' }}</span>        color: white;    
+
+                    `;
+
+                });                    </div>
+
+            } else {
+
+                html = '<div class="col-12"><div class="alert alert-info">No placeholders found in this template.</div></div>';                    <div class="info-row">        padding: 0.25rem 0.75rem;    .btn-fill:hover {
+
+            }
+
+            $('#placeholderFields').html(html);                        <i class="fas fa-layer-group info-icon text-info"></i>
+
+        })
+
+        .fail(function() {                        <span class="info-label">Sheets:</span>        border-radius: 15px;        background: linear-gradient(45deg, #219a52, #1e8449);
+
+            $('#placeholderFields').html('<div class="col-12"><div class="alert alert-danger">Failed to load placeholders</div></div>');
+
+        });                        <span class="info-value">{{ template.sheets|length }} sheet(s)</span>
+
+});
+
+                    </div>        font-size: 0.8rem;        color: white;
+
+function fillTemplate() {
+
+    const formData = {};                    {% if template.placeholders %}
+
+    $('#fillTemplateForm input').each(function() {
+
+        formData[$(this).attr('name')] = $(this).val();                    <div class="info-row">        margin: 0.25rem;        transform: translateY(-2px);
+
+    });
+
+                            <i class="fas fa-tags info-icon text-danger"></i>
+
+    const templateName = '{{ template.name }}';
+
+                            <span class="info-label">Placeholders:</span>        font-weight: 500;    }
+
+    $.ajax({
+
+        url: '/templates/api/generate',                        <span class="info-value">{{ template.placeholders|length }} field(s)</span>
+
+        method: 'POST',
+
+        contentType: 'application/json',                    </div>    }    
+
+        data: JSON.stringify({
+
+            template_name: templateName,                    {% endif %}
+
+            data: formData
+
+        })                </div></style>    .btn-use {
+
+    })
+
+    .done(function(data) {            </div>
+
+        if (data.success) {
+
+            window.location.href = data.download_url;{% endblock %}        background: linear-gradient(45deg, #8e44ad, #7d3c98);
+
+            $('#fillTemplateModal').modal('hide');
+
+        } else {            <!-- Placeholders -->
+
+            alert('Failed to fill template: ' + data.message);
+
+        }            {% if template.placeholders %}        border: none;
+
+    })
+
+    .fail(function() {            <div class="card detail-card">
+
+        alert('Failed to fill template');
+
+    });                <div class="card-header">{% block content %}        color: white;
+
+}
+
+</script>                    <h5 class="card-title mb-0">
+
+{% endblock %}
+                        <i class="fas fa-tags me-2"></i>Placeholders ({{ template.placeholders|length }})<!-- Template Header -->    }
+
+                    </h5>
+
+                </div><div class="template-header">    
+
+                <div class="card-body">
+
+                    <div class="row">    <div class="container-fluid">    .btn-use:hover {
+
+                        {% for placeholder in template.placeholders %}
+
+                        <div class="col-md-4 col-sm-6 mb-2">        <div class="row align-items-center">        background: linear-gradient(45deg, #7d3c98, #6c3483);
+
+                            <span class="placeholder-item">{{{ placeholder }}}</span>
+
+                        </div>            <div class="col-md-8">        color: white;
+
+                        {% endfor %}
+
+                    </div>                <div class="d-flex align-items-center mb-2">        transform: translateY(-2px);
+
+                </div>
+
+            </div>                    <i class="fas fa-file-excel text-white me-3" style="font-size: 2.5rem;"></i>    }
+
+            {% endif %}
+
+        </div>                    <h1 class="mb-0 fs-2">{{ template.display_name }}</h1>    
+
+
+
+        <!-- Actions Sidebar -->                </div>    .btn-download {
+
+        <div class="col-xl-4">
+
+            <div class="card action-card">                <p class="mb-0 fs-5 opacity-75">Nike Export Template - {{ template.type if template.type else 'Form Template' }}</p>        background: linear-gradient(45deg, #f39c12, #e67e22);
+
+                <div class="card-header">
+
+                    <h5 class="card-title mb-0">            </div>        border: none;
+
+                        <i class="fas fa-cogs me-2"></i>Actions
+
+                    </h5>            <div class="col-md-4 text-end">        color: white;
+
+                </div>
+
+                <div class="card-body">                <a href="{{ url_for('templates.list_templates') }}" class="btn btn-light btn-lg">    }
+
+                    <div class="d-grid gap-2">
+
+                        <!-- Preview Template -->                    <i class="fas fa-arrow-left me-2"></i>    
+
+                        <button type="button" class="btn btn-info" onclick="previewTemplate()" id="previewBtn">
+
+                            <i class="fas fa-eye me-2"></i>Preview Template                    Quay lại    .btn-download:hover {
+
+                        </button>
+
+                                        </a>        background: linear-gradient(45deg, #e67e22, #d35400);
+
+                        <!-- Fill Template -->
+
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#fillTemplateModal">            </div>        color: white;
+
+                            <i class="fas fa-edit me-2"></i>Fill Template
+
+                        </button>        </div>        transform: translateY(-2px);
+
+                        
+
+                        <!-- Download Template -->    </div>    }
+
+                        <a href="{{ url_for('templates.download_original_template', template_name=template.name) }}" class="btn btn-outline-info">
+
+                            <i class="fas fa-download me-2"></i>Download Original</div>    
+
+                        </a>
+
+                    </div>    .btn-scan {
+
+                </div>
+
+            </div><div class="container-fluid">        background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+
+
+
+            <!-- Validation Results -->    <div class="row">        border: none;
+
+            {% if errors or warnings %}
+
+            <div class="card mt-4">        <!-- Template Details -->        color: white;
+
+                <div class="card-header">
+
+                    <h5 class="card-title mb-0">        <div class="col-xl-8">    }
+
+                        <i class="fas fa-exclamation-triangle me-2"></i>Validation
+
+                    </h5>            <!-- Basic Info -->    
+
+                </div>
+
+                <div class="card-body">            <div class="card detail-card">    .btn-scan:hover {
+
+                    {% if errors %}
+
+                    <div class="alert alert-danger">                <div class="card-header">        background: linear-gradient(45deg, #7f8c8d, #6c757d);
+
+                        <h6>Errors:</h6>
+
+                        <ul class="mb-0">                    <h5 class="card-title mb-0">        color: white;
+
+                            {% for error in errors %}
+
+                            <li>{{ error }}</li>                        <i class="fas fa-info-circle me-2"></i>Template Information        transform: translateY(-2px);
+
+                            {% endfor %}
+
+                        </ul>                    </h5>    }
+
+                    </div>
+
+                    {% endif %}                </div>    
+
+                    
+
+                    {% if warnings %}                <div class="card-body">    .info-row {
+
+                    <div class="alert alert-warning">
+
+                        <h6>Warnings:</h6>                    <div class="info-row">        display: flex;
+
+                        <ul class="mb-0">
+
+                            {% for warning in warnings %}                        <i class="fas fa-file info-icon text-primary"></i>        align-items: center;
+
+                            <li>{{ warning }}</li>
+
+                            {% endfor %}                        <span class="info-label">Filename:</span>        padding: 0.75rem 0;
+
+                        </ul>
+
+                    </div>                        <span class="info-value">{{ template.name }}</span>        border-bottom: 1px solid #e9ecef;
+
+                    {% endif %}
+
+                </div>                    </div>    }
+
+            </div>
+
+            {% endif %}                    <div class="info-row">    
+
+        </div>
+
+    </div>                        <i class="fas fa-calendar info-icon text-success"></i>    .info-icon {
+
+</div>
+
+                        <span class="info-label">Last Modified:</span>        width: 20px;
+
+<!-- Fill Template Modal -->
+
+<div class="modal fade" id="fillTemplateModal" tabindex="-1">                        <span class="info-value">{{ template.last_modified.strftime('%Y-%m-%d %H:%M:%S') if template.last_modified else 'Unknown' }}</span>        height: 20px;
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">                    </div>        margin-right: 1rem;
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">Fill Template Data</h5>                    <div class="info-row">        flex-shrink: 0;
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+            </div>                        <i class="fas fa-weight info-icon text-warning"></i>    }
+
+            <div class="modal-body">
+
+                <form id="fillTemplateForm">                        <span class="info-label">File Size:</span>    
+
+                    <div class="row" id="placeholderFields">
+
+                        <div class="col-12 text-center">                        <span class="info-value">{{ "%.2f KB"|format(template.size / 1024) if template.size else 'Unknown' }}</span>    .info-label {
+
+                            <div class="spinner-border" role="status">
+
+                                <span class="visually-hidden">Loading placeholders...</span>                    </div>        font-weight: 600;
+
+                            </div>
+
+                        </div>                    <div class="info-row">        color: #495057;
+
+                    </div>
+
+                </form>                        <i class="fas fa-layer-group info-icon text-info"></i>        min-width: 120px;
+
+            </div>
+
+            <div class="modal-footer">                        <span class="info-label">Sheets:</span>    }
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+
+                <button type="button" class="btn btn-success" onclick="fillTemplate()">Fill & Download</button>                        <span class="info-value">{{ template.sheets|length }} sheet(s)</span>    
+
+            </div>
+
+        </div>                    </div>    .info-value {
+
+    </div>
+
+</div>                    {% if template.placeholders %}        color: #6c757d;
+
+
+
+<!-- Preview Template Modal -->                    <div class="info-row">        flex-grow: 1;
+
+<div class="modal fade" id="previewTemplateModal" tabindex="-1">
+
+    <div class="modal-dialog modal-xl">                        <i class="fas fa-tags info-icon text-danger"></i>    }
+
+        <div class="modal-content">
+
+            <div class="modal-header">                        <span class="info-label">Placeholders:</span>    
+
+                <h5 class="modal-title">Template Preview - <span id="previewTemplateName"></span></h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>                        <span class="info-value">{{ template.placeholders|length }} field(s)</span>    .stats-grid {
+
+            </div>
+
+            <div class="modal-body">                    </div>        display: grid;
+
+                <div id="previewContent">
+
+                    <div class="text-center">                    {% endif %}        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+                        <div class="spinner-border" role="status">
+
+                            <span class="visually-hidden">Loading preview...</span>                </div>        gap: 1rem;
+
+                        </div>
+
+                    </div>            </div>        margin-bottom: 2rem;
+
+                </div>
+
+            </div>    }
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>            <!-- Sheets List -->    
+
+            </div>
+
+        </div>            {% if template.sheets %}    .stat-card {
+
+    </div>
+
+</div>            <div class="card detail-card">        background: white;
+
+
+
+<script>                <div class="card-header">        border-radius: 12px;
+
+// Template detail page JavaScript
+
+$(document).ready(function() {                    <h5 class="card-title mb-0">        padding: 1.5rem;
+
+    console.log('Template detail page loaded');
+
+});                        <i class="fas fa-table me-2"></i>Sheets ({{ template.sheets|length }})        text-align: center;
+
+
+
+// Load placeholders for template filling                    </h5>        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+$('#fillTemplateModal').on('show.bs.modal', function () {
+
+    const templateName = '{{ template.name }}';                </div>        transition: transform 0.2s ease;
+
+    
+
+    $.get(`/templates/api/${templateName}/placeholders`)                <div class="card-body">    }
+
+        .done(function(data) {
+
+            let html = '';                    <div class="table-responsive">    
+
+            data.placeholders.forEach(function(placeholder) {
+
+                html += `                        <table class="table table-hover">    .stat-card:hover {
+
+                    <div class="col-md-6 mb-3">
+
+                        <label for="field_${placeholder}" class="form-label">${placeholder}</label>                            <thead>        transform: translateY(-3px);
+
+                        <input type="text" class="form-control" id="field_${placeholder}" name="${placeholder}">
+
+                    </div>                                <tr>    }
+
+                `;
+
+            });                                    <th>Sheet Name</th>    
+
+            $('#placeholderFields').html(html);
+
+        })                                    <th>Type</th>    .stat-icon {
+
+        .fail(function() {
+
+            $('#placeholderFields').html('<div class="alert alert-danger">Failed to load placeholders</div>');                                    <th>Actions</th>        width: 40px;
+
+        });
+
+});                                </tr>        height: 40px;
+
+
+
+function fillTemplate() {                            </thead>        margin-bottom: 1rem;
+
+    const formData = {};
+
+    $('#fillTemplateForm input').each(function() {                            <tbody>    }
+
+        formData[$(this).attr('name')] = $(this).val();
+
+    });                                {% for sheet in template.sheets %}    
+
+    
+
+    const templateName = '{{ template.name }}';                                <tr>    .stat-number {
+
+    
+
+    $.ajax({                                    <td>        font-size: 2rem;
+
+        url: '/templates/api/generate',
+
+        method: 'POST',                                        <i class="fas fa-table me-2"></i>{{ sheet }}        font-weight: bold;
+
+        contentType: 'application/json',
+
+        data: JSON.stringify({                                        {% if template.is_nike_form and sheet == template.sheet_name %}        color: #2c3e50;
+
+            template_name: templateName,
+
+            data: formData                                            <span class="badge bg-primary ms-2">Current</span>        margin-bottom: 0.5rem;
+
+        })
+
+    })                                        {% endif %}    }
+
+    .done(function(data) {
+
+        if (data.success) {                                    </td>    
+
+            window.location.href = data.download_url;
+
+            $('#fillTemplateModal').modal('hide');                                    <td>    .stat-label {
+
+        } else {
+
+            alert('Failed to fill template: ' + data.message);                                        {% if sheet == 'Data' %}        color: #7f8c8d;
+
+        }
+
+    })                                            <span class="badge bg-warning">Data Sheet</span>        font-size: 0.9rem;
+
+    .fail(function() {
+
+        alert('Failed to fill template');                                        {% else %}    }
+
+    });
+
+}                                            <span class="badge bg-success">Form Sheet</span>    
+
+
+
+function previewTemplate() {                                        {% endif %}    .placeholder-list {
+
+    const templateName = '{{ template.display_name }}';
+
+                                        </td>        max-height: 300px;
+
+    $('#previewTemplateModal').modal('show');
+
+    $('#previewTemplateName').text(templateName);                                    <td>        overflow-y: auto;
+
+    
+
+    const previewUrl = `/templates/preview/${encodeURIComponent(templateName)}`;                                        {% if sheet != 'Data' and template.name == 'MergeDataNike.xlsm' %}    }
+
+    
+
+    $.get(previewUrl)                                            <a href="{{ url_for('templates.template_detail', template_name=sheet) }}"     
+
+        .done(function(data) {
+
+            if (data.success) {                                               class="btn btn-sm btn-outline-primary">View Form</a>    .placeholder-item {
+
+                renderPreviewTable(data);
+
+            } else {                                        {% endif %}        display: inline-block;
+
+                $('#previewContent').html(`<div class="alert alert-danger">${data.message}</div>`);
+
+            }                                    </td>        background: linear-gradient(45deg, #e74c3c, #c0392b);
+
+        })
+
+        .fail(function(xhr, status, error) {                                </tr>        color: white;
+
+            $('#previewContent').html('<div class="alert alert-danger">Failed to load preview</div>');
+
+        });                                {% endfor %}        padding: 0.25rem 0.75rem;
+
+}
+
+                            </tbody>        border-radius: 15px;
+
+function renderPreviewTable(data) {
+
+    let html = `                        </table>        font-size: 0.8rem;
+
+        <div class="mb-3">
+
+            <small class="text-muted">                    </div>        margin: 0.25rem;
+
+                Sheet: ${data.sheet_name} | Rows: ${data.total_rows} | Columns: ${data.total_cols}
+
+            </small>                </div>        font-weight: 500;
+
+        </div>
+
+        <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">            </div>    }
+
+            <table class="table table-sm table-bordered">
+
+    `;            {% endif %}</style>
+
+    
+
+    data.preview_data.forEach(function(row, rowIndex) {{% endblock %}
+
+        html += '<tr>';
+
+        row.forEach(function(cell, colIndex) {            <!-- Placeholders -->
+
+            let cellClass = '';
+
+            let cellContent = cell.value || '&nbsp;';            {% if template.placeholders %}{% block content %}
+
+            
+
+            if (cell.is_placeholder) {            <div class="card detail-card"><!-- Template Header -->
+
+                cellClass = 'table-warning fw-bold';
+
+                cellContent = `<span class="text-danger">${cell.value}</span>`;                <div class="card-header"><div class="template-header">
+
+            }
+
+                                <h5 class="card-title mb-0">    <div class="container-fluid">
+
+            html += `<td class="${cellClass}" title="${cell.address}">${cellContent}</td>`;
+
+        });                        <i class="fas fa-tags me-2"></i>Placeholders ({{ template.placeholders|length }})        <div class="row align-items-center">
+
+        html += '</tr>';
+
+    });                    </h5>            <div class="col-md-8">
+
+    
+
+    html += `                </div>                <div class="d-flex align-items-center mb-2">
+
+            </table>
+
+        </div>                <div class="card-body">                    <i class="fas fa-file-excel text-white me-3" style="font-size: 2.5rem;"></i>
+
+        <div class="mt-2">
+
+            <small class="text-muted">                    <div class="row">                    <h1 class="mb-0 fs-2">{{ template.display_name }}</h1>
+
+                <span class="badge bg-warning">Yellow</span> = Placeholders that can be filled
+
+            </small>                        {% for placeholder in template.placeholders %}                </div>
+
+        </div>
+
+    `;                        <div class="col-md-4 col-sm-6 mb-2">                <p class="mb-0 fs-5 opacity-75">Nike Export Template - {{ template.type if template.type else 'Form Template' }}</p>
+
+    
+
+    $('#previewContent').html(html);                            <span class="placeholder-item">{{{ placeholder }}}</span>            </div>
+
+}
+
+</script>                        </div>            <div class="col-md-4 text-end">
+
+{% endblock %}
+                        {% endfor %}                <a href="{{ url_for('templates.list_templates') }}" class="btn btn-light btn-lg">
+
+                    </div>                    <i class="fas fa-arrow-left me-2"></i>
+
+                </div>                    Quay lại
+
+            </div>                </a>
+
+            {% endif %}        </div>
+
+        </div>    </div>
+
+</div>
+
+        <!-- Actions Sidebar -->
+
+        <div class="col-xl-4"><!-- Modals and Scripts Section -->
+
+            <div class="card action-card">
+
+                <div class="card-header"><!-- Use Template Modal -->
+
+                    <h5 class="card-title mb-0"><div class="modal fade" id="useTemplateModal" tabindex="-1">
+
+                        <i class="fas fa-cogs me-2"></i>Actions    <div class="modal-dialog">
+
+                    </h5>        <div class="modal-content">
+
+                </div>            <div class="modal-header">
+
+                <div class="card-body">                <h5 class="modal-title">Sử dụng Template</h5>
+
+                    <div class="d-grid gap-2">                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                        <!-- Preview Template -->            </div>
+
+                        <button type="button" class="btn btn-info" onclick="previewTemplate()" id="previewBtn">            <div class="modal-body">
+
+                            <i class="fas fa-eye me-2"></i>Preview Template                <p>Chọn invoices để áp dụng template này:</p>
+
+                        </button>                <div id="invoiceSelection">
+
+                                            <div class="spinner-border" role="status">
+
+                        <!-- Use Template -->                        <span class="visually-hidden">Đang tải...</span>
+
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#useTemplateModal">                    </div>
+
+                            <i class="fas fa-play me-2"></i>Use Template                </div>
+
+                        </button>            </div>
+
+                                    <div class="modal-footer">
+
+                        <!-- Fill Template -->                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#fillTemplateModal">                <button type="button" class="btn btn-primary" onclick="applyTemplate()">Áp dụng Template</button>
+
+                            <i class="fas fa-edit me-2"></i>Fill Template            </div>
+
+                        </button>        </div>
+
+                            </div>
+
+                        <!-- Download Template --></div>
+
+                        <a href="{{ url_for('templates.download_original_template', template_name=template.name) }}" class="btn btn-outline-info">
+
+                            <i class="fas fa-download me-2"></i>Download Original<!-- Fill Template Modal -->
+
+                        </a><div class="modal fade" id="fillTemplateModal" tabindex="-1">
+
+                            <div class="modal-dialog modal-lg">
+
+                        <!-- Scan Placeholders -->        <div class="modal-content">
+
+                        <button type="button" class="btn btn-outline-secondary" onclick="scanPlaceholders()">            <div class="modal-header">
+
+                            <i class="fas fa-search me-2"></i>Scan Placeholders                <h5 class="modal-title">Điền dữ liệu Template</h5>
+
+                        </button>                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                    </div>            </div>
+
+                </div>            <div class="modal-body">
+
+            </div>                <form id="fillTemplateForm">
+
+                    <div class="row" id="placeholderFields">
+
+            <!-- Validation Results -->                        <div class="col-12 text-center">
+
+            {% if errors or warnings %}                            <div class="spinner-border" role="status">
+
+            <div class="card mt-4">                                <span class="visually-hidden">Đang tải trường dữ liệu...</span>
+
+                <div class="card-header">                            </div>
+
+                    <h5 class="card-title mb-0">                        </div>
+
+                        <i class="fas fa-exclamation-triangle me-2"></i>Validation                    </div>
+
+                    </h5>                </form>
+
+                </div>            </div>
+
+                <div class="card-body">            <div class="modal-footer">
+
+                    {% if errors %}                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+
+                    <div class="alert alert-danger">                <button type="button" class="btn btn-info" onclick="previewFillTemplate()">
+
+                        <h6>Errors:</h6>                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHA8ZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K" class="me-2" style="width:16px;height:16px;">
+
+                        <ul class="mb-0">                    Xem trước
+
+                            {% for error in errors %}                </button>
+
+                            <li>{{ error }}</li>                <button type="button" class="btn btn-success" onclick="fillTemplate()">Điền & Tải xuống</button>
+
+                            {% endfor %}            </div>
+
+                        </ul>        </div>
+
+                    </div>    </div>
+
+                    {% endif %}</div>
+
+                    
+
+                    {% if warnings %}<!-- Preview Template Modal -->
+
+                    <div class="alert alert-warning"><div class="modal fade" id="previewTemplateModal" tabindex="-1">
+
+                        <h6>Warnings:</h6>    <div class="modal-dialog modal-xl">
+
+                        <ul class="mb-0">        <div class="modal-content">
+
+                            {% for warning in warnings %}            <div class="modal-header">
+
+                            <li>{{ warning }}</li>                <h5 class="modal-title">Xem trước Template - <span id="previewTemplateName"></span></h5>
+
+                            {% endfor %}                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                        </ul>            </div>
+
+                    </div>            <div class="modal-body">
+
+                    {% endif %}                <div id="previewContent">
+
+                </div>                    <div class="text-center">
+
+            </div>                        <div class="spinner-border" role="status">
+
+            {% endif %}                            <span class="visually-hidden">Đang tải xem trước...</span>
+
+        </div>                        </div>
+
+    </div>                    </div>
+
+</div>                </div>
+
+            </div>
+
+<!-- Use Template Modal -->            <div class="modal-footer">
+
+<div class="modal fade" id="useTemplateModal" tabindex="-1">                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+
+    <div class="modal-dialog">                <button type="button" class="btn btn-success" onclick="fillTemplateFromPreview()">
+
+        <div class="modal-content">                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHA8ZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K" class="me-2" style="width:16px;height:16px;">
+
+            <div class="modal-header">                    Điền Template này
+
+                <h5 class="modal-title">Use Template</h5>                </button>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>            </div>
+
+            </div>        </div>
+
+            <div class="modal-body">    </div>
+
+                <p>Select invoices to apply this template to:</p></div>
+
+                <div id="invoiceSelection">
+
+                    <div class="spinner-border" role="status"><!-- Preview Fill Template Modal -->
+
+                        <span class="visually-hidden">Loading...</span><div class="modal fade" id="previewFillModal" tabindex="-1">
+
+                    </div>    <div class="modal-dialog modal-xl">
+
+                </div>        <div class="modal-content">
+
+            </div>            <div class="modal-header">
+
+            <div class="modal-footer">                <h5 class="modal-title">Xem trước Template đã điền - <span id="previewFillTemplateName"></span></h5>
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                <button type="button" class="btn btn-primary" onclick="applyTemplate()">Apply Template</button>            </div>
+
+            </div>            <div class="modal-body">
+
+        </div>                <div id="previewFillContent">
+
+    </div>                    <div class="text-center">
+
+</div>                        <div class="spinner-border" role="status">
+
+                            <span class="visually-hidden">Đang tải xem trước...</span>
+
+<!-- Fill Template Modal -->                        </div>
+
+<div class="modal fade" id="fillTemplateModal" tabindex="-1">                    </div>
+
+    <div class="modal-dialog modal-lg">                </div>
+
+        <div class="modal-content">            </div>
+
+            <div class="modal-header">            <div class="modal-footer">
+
+                <h5 class="modal-title">Fill Template Data</h5>                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>                <button type="button" class="btn btn-warning" onclick="$('#previewFillModal').modal('hide'); $('#fillTemplateModal').modal('show');">
+
+            </div>                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHA8ZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K" class="me-2" style="width:16px;height:16px;">
+
+            <div class="modal-body">                    Chỉnh sửa dữ liệu
+
+                <form id="fillTemplateForm">                </button>
+
+                    <div class="row" id="placeholderFields">                <button type="button" class="btn btn-success" onclick="fillTemplateFromFillPreview()">
+
+                        <div class="col-12 text-center">                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHA8ZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K" class="me-2" style="width:16px;height:16px;">
+
+                            <div class="spinner-border" role="status">                    Tạo & Tải xuống
+
+                                <span class="visually-hidden">Loading placeholders...</span>                </button>
+
+                            </div>            </div>
+
+                        </div>        </div>
+
+                    </div>    </div>
+
+                </form></div>
+
+            </div>
+
+            <div class="modal-footer"><script>
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>// Test if jQuery and modal are working
+
+                <button type="button" class="btn btn-info" onclick="previewFillTemplate()">$(document).ready(function() {
+
+                    <i class="fas fa-eye me-2"></i>Preview    console.log('Document ready, jQuery version:', $.fn.jquery);
+
+                </button>    console.log('Bootstrap modal available:', typeof $.fn.modal);
+
+                <button type="button" class="btn btn-success" onclick="fillTemplate()">Fill & Download</button>    
+
+            </div>    // Test button click
+
+        </div>    $('#previewBtn').click(function() {
+
+    </div>        console.log('Preview button clicked via jQuery');
+
+</div>    });
+
+});
+
+<!-- Preview Template Modal -->
+
+<div class="modal fade" id="previewTemplateModal" tabindex="-1">// Load invoices for template application
+
+    <div class="modal-dialog modal-xl">$('#useTemplateModal').on('show.bs.modal', function () {
+
+        <div class="modal-content">    $.get('/api/invoices')
+
+            <div class="modal-header">        .done(function(data) {
+
+                <h5 class="modal-title">Template Preview - <span id="previewTemplateName"></span></h5>            let html = '<div class="form-check-inline">';
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>            data.invoices.forEach(function(invoice) {
+
+            </div>                html += `
+
+            <div class="modal-body">                    <div class="form-check mb-2">
+
+                <div id="previewContent">                        <input class="form-check-input" type="checkbox" value="${invoice.id}" id="invoice_${invoice.id}">
+
+                    <div class="text-center">                        <label class="form-check-label" for="invoice_${invoice.id}">
+
+                        <div class="spinner-border" role="status">                            ${invoice.invoice_number} (${invoice.status})
+
+                            <span class="visually-hidden">Loading preview...</span>                        </label>
+
+                        </div>                    </div>
+
+                    </div>                `;
+
+                </div>            });
+
+            </div>            html += '</div>';
+
+            <div class="modal-footer">            $('#invoiceSelection').html(html);
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        })
+
+                <button type="button" class="btn btn-primary" onclick="fillTemplateFromPreview()">        .fail(function() {
+
+                    <i class="fas fa-edit me-2"></i>Fill This Template            $('#invoiceSelection').html('<div class="alert alert-danger">Không thể tải danh sách invoices</div>');
+
+                </button>        });
+
+            </div>});
+
+        </div>
+
+    </div>// Load placeholders for template filling
+
+</div>$('#fillTemplateModal').on('show.bs.modal', function () {
+
+    const templateName = '{{ template.name }}';
+
+<!-- Preview Fill Template Modal -->    const sheetName = '{{ template.sheet_name }}';
+
+<div class="modal fade" id="previewFillModal" tabindex="-1">    
+
+    <div class="modal-dialog modal-xl">    $.get(`/api/templates/${templateName}/placeholders`)
+
+        <div class="modal-content">        .done(function(data) {
+
+            <div class="modal-header">            let html = '';
+
+                <h5 class="modal-title">Preview Filled Template - <span id="previewFillTemplateName"></span></h5>            data.placeholders.forEach(function(placeholder) {
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>                html += `
+
+            </div>                    <div class="col-md-6 mb-3">
+
+            <div class="modal-body">                        <label for="field_${placeholder}" class="form-label">${placeholder}</label>
+
+                <div id="previewFillContent">                        <input type="text" class="form-control" id="field_${placeholder}" name="${placeholder}">
+
+                    <div class="text-center">                    </div>
+
+                        <div class="spinner-border" role="status">                `;
+
+                            <span class="visually-hidden">Loading preview...</span>            });
+
+                        </div>            $('#placeholderFields').html(html);
+
+                    </div>        })
+
+                </div>        .fail(function() {
+
+            </div>            $('#placeholderFields').html('<div class="alert alert-danger">Không thể tải trường dữ liệu</div>');
+
+            <div class="modal-footer">        });
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>});
+
+                <button type="button" class="btn btn-warning" onclick="$('#previewFillModal').modal('hide'); $('#fillTemplateModal').modal('show');">
+
+                    <i class="fas fa-edit me-2"></i>Edit Datafunction applyTemplate() {
+
+                </button>    const selectedInvoices = [];
+
+                <button type="button" class="btn btn-success" onclick="fillTemplateFromFillPreview()">    $('input[type="checkbox"]:checked').each(function() {
+
+                    <i class="fas fa-download me-2"></i>Generate & Download        selectedInvoices.push($(this).val());
+
+                </button>    });
+
+            </div>    
+
+        </div>    if (selectedInvoices.length === 0) {
+
+    </div>        alert('Vui lòng chọn ít nhất một invoice');
+
+</div>        return;
+
+    }
+
+<script>    
+
+// Template detail page JavaScript    // Apply template to selected invoices
+
+$(document).ready(function() {    const templateName = '{{ template.name }}';
+
+    console.log('Template detail page loaded');    const sheetName = '{{ template.sheet_name }}';
+
+});    
+
+    $.post('/api/templates/apply', {
+
+// Load invoices for template application        template_name: templateName,
+
+$('#useTemplateModal').on('show.bs.modal', function () {        sheet_name: sheetName,
+
+    $.get('/api/invoices')        invoice_ids: selectedInvoices
+
+        .done(function(data) {    })
+
+            let html = '<div class="form-check-inline">';    .done(function(data) {
+
+            data.invoices.forEach(function(invoice) {        alert('Template đã được áp dụng thành công!');
+
+                html += `        $('#useTemplateModal').modal('hide');
+
+                    <div class="form-check mb-2">    })
+
+                        <input class="form-check-input" type="checkbox" value="${invoice.id}" id="invoice_${invoice.id}">    .fail(function() {
+
+                        <label class="form-check-label" for="invoice_${invoice.id}">        alert('Không thể áp dụng template');
+
+                            ${invoice.invoice_number} (${invoice.status})    });
+
+                        </label>}
+
+                    </div>
+
+                `;function fillTemplate() {
+
+            });    const formData = {};
+
+            html += '</div>';    $('#fillTemplateForm input').each(function() {
+
+            $('#invoiceSelection').html(html);        formData[$(this).attr('name')] = $(this).val();
+
+        })    });
+
+        .fail(function() {    
+
+            $('#invoiceSelection').html('<div class="alert alert-danger">Failed to load invoices</div>');    const templateName = '{{ template.name }}';
+
+        });    const sheetName = '{{ template.sheet_name }}';
+
+});    
+
+    $.post('/api/templates/fill', {
+
+// Load placeholders for template filling        template_name: templateName,
+
+$('#fillTemplateModal').on('show.bs.modal', function () {        sheet_name: sheetName,
+
+    const templateName = '{{ template.name }}';        data: formData
+
+        })
+
+    $.get(`/templates/api/${templateName}/placeholders`)    .done(function(data) {
+
+        .done(function(data) {        if (data.success) {
+
+            let html = '';            // Download the filled template
+
+            data.placeholders.forEach(function(placeholder) {            window.location.href = data.download_url;
+
+                html += `            $('#fillTemplateModal').modal('hide');
+
+                    <div class="col-md-6 mb-3">        } else {
+
+                        <label for="field_${placeholder}" class="form-label">${placeholder}</label>            alert('Không thể điền template: ' + data.message);
+
+                        <input type="text" class="form-control" id="field_${placeholder}" name="${placeholder}">        }
+
+                    </div>    })
+
+                `;    .fail(function() {
+
+            });        alert('Không thể điền template');
+
+            $('#placeholderFields').html(html);    });
+
+        })}
+
+        .fail(function() {
+
+            $('#placeholderFields').html('<div class="alert alert-danger">Failed to load placeholders</div>');function scanPlaceholders() {
+
+        });    const templateName = '{{ template.name }}';
+
+});    
+
+    $.get(`/api/templates/${templateName}/placeholders`)
+
+function applyTemplate() {        .done(function(data) {
+
+    const selectedInvoices = [];            alert(`Tìm thấy ${data.placeholders.length} trường dữ liệu:\n${data.placeholders.join(', ')}`);
+
+    $('input[type="checkbox"]:checked').each(function() {        })
+
+        selectedInvoices.push($(this).val());        .fail(function() {
+
+    });            alert('Không thể quét trường dữ liệu');
+
+            });
+
+    if (selectedInvoices.length === 0) {}
+
+        alert('Please select at least one invoice');
+
+        return;function previewTemplate() {
+
+    }    console.log('previewTemplate called');
+
+        
+
+    alert('Template apply functionality coming soon!');    const templateName = '{{ template.display_name }}';
+
+    $('#useTemplateModal').modal('hide');    console.log('Template name:', templateName);
+
+}    
+
+    // Show modal
+
+function fillTemplate() {    $('#previewTemplateModal').modal('show');
+
+    const formData = {};    $('#previewTemplateName').text(templateName);
+
+    $('#fillTemplateForm input').each(function() {    
+
+        formData[$(this).attr('name')] = $(this).val();    console.log('Modal show() called');
+
+    });    
+
+        // Load preview data
+
+    const templateName = '{{ template.name }}';    const previewUrl = `/templates/preview/${encodeURIComponent(templateName)}`;
+
+        console.log('Preview URL:', previewUrl);
+
+    $.ajax({    
+
+        url: '/templates/api/generate',    $.get(previewUrl)
+
+        method: 'POST',        .done(function(data) {
+
+        contentType: 'application/json',            console.log('Preview data received:', data);
+
+        data: JSON.stringify({            if (data.success) {
+
+            template_name: templateName,                renderPreviewTable(data);
+
+            data: formData            } else {
+
+        })                $('#previewContent').html(`<div class="alert alert-danger">${data.message}</div>`);
+
+    })            }
+
+    .done(function(data) {        })
+
+        if (data.success) {        .fail(function(xhr, status, error) {
+
+            window.location.href = data.download_url;            console.error('Preview request failed:', status, error);
+
+            $('#fillTemplateModal').modal('hide');            $('#previewContent').html('<div class="alert alert-danger">Không thể tải xem trước</div>');
+
+        } else {        });
+
+            alert('Failed to fill template: ' + data.message);}
+
+        }
+
+    })function renderPreviewTable(data) {
+
+    .fail(function() {    let html = `
+
+        alert('Failed to fill template');        <div class="mb-3">
+
+    });            <small class="text-muted">
+
+}                Sheet: ${data.sheet_name} | Rows: ${data.total_rows} | Columns: ${data.total_cols}
+
+            </small>
+
+function scanPlaceholders() {        </div>
+
+    const templateName = '{{ template.name }}';        <div class="excel-preview-container" style="
+
+                max-height: 80vh; 
+
+    $.get(`/templates/api/${templateName}/placeholders`)            overflow: auto; 
+
+        .done(function(data) {            background: white; 
+
+            alert(`Found ${data.placeholders.length} placeholders:\n${data.placeholders.join(', ')}`);            border: 1px solid #ddd;
+
+        })            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        .fail(function() {        ">
+
+            alert('Failed to scan placeholders');            <table class="excel-table" style="
+
+        });                border-collapse: collapse; 
+
+}                width: 100%; 
+
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+function previewTemplate() {                font-size: 11px;
+
+    const templateName = '{{ template.display_name }}';                background: white;
+
+                ">
+
+    $('#previewTemplateModal').modal('show');    `;
+
+    $('#previewTemplateName').text(templateName);    
+
+        data.preview_data.forEach(function(row, rowIndex) {
+
+    const previewUrl = `/templates/preview/${encodeURIComponent(templateName)}`;        html += '<tr>';
+
+            
+
+    $.get(previewUrl)        row.forEach(function(cell, colIndex) {
+
+        .done(function(data) {            // Build cell style based on Excel formatting
+
+            if (data.success) {            let cellStyle = 'padding: 2px 4px; border: 1px solid #e0e0e0; vertical-align: top;';
+
+                renderPreviewTable(data);            
+
+            } else {            if (cell.style) {
+
+                $('#previewContent').html(`<div class="alert alert-danger">${data.message}</div>`);                // Font styling
+
+            }                if (cell.style.font_bold) {
+
+        })                    cellStyle += 'font-weight: bold;';
+
+        .fail(function(xhr, status, error) {                }
+
+            $('#previewContent').html('<div class="alert alert-danger">Failed to load preview</div>');                
+
+        });                if (cell.style.font_size && cell.style.font_size !== 11) {
+
+}                    cellStyle += `font-size: ${cell.style.font_size}px;`;
+
+                }
+
+function renderPreviewTable(data) {                
+
+    let html = `                // Background color
+
+        <div class="mb-3">                if (cell.style.bg_color && cell.style.bg_color !== 'FFFFFF') {
+
+            <small class="text-muted">                    cellStyle += `background-color: #${cell.style.bg_color};`;
+
+                Sheet: ${data.sheet_name} | Rows: ${data.total_rows} | Columns: ${data.total_cols}                }
+
+            </small>                
+
+        </div>                // Text alignment
+
+        <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">                if (cell.style.alignment && cell.style.alignment !== 'general') {
+
+            <table class="table table-sm table-bordered">                    cellStyle += `text-align: ${cell.style.alignment};`;
+
+    `;                }
+
+                    
+
+    data.preview_data.forEach(function(row, rowIndex) {                // Border styling
+
+        html += '<tr>';                if (cell.style.border) {
+
+        row.forEach(function(cell, colIndex) {                    cellStyle += 'border: 1px solid #333;';
+
+            let cellClass = '';                }
+
+            let cellContent = cell.value || '&nbsp;';            }
+
+                        
+
+            if (cell.is_placeholder) {            // Highlight placeholders
+
+                cellClass = 'table-warning fw-bold';            let cellClass = '';
+
+                cellContent = `<span class="text-danger">${cell.value}</span>`;            let cellContent = cell.value;
+
+            }            
+
+                        if (cell.is_placeholder) {
+
+            html += `<td class="${cellClass}" title="${cell.address}">${cellContent}</td>`;                cellClass = 'placeholder-cell';
+
+        });                cellStyle += 'background-color: #fff3cd !important; border: 2px solid #ffc107 !important; font-weight: bold;';
+
+        html += '</tr>';                cellContent = `<span style="color: #856404;">${cell.value}</span>`;
+
+    });            }
+
+                
+
+    html += `            // Handle empty cells
+
+            </table>            if (!cell.value || cell.value.trim() === '') {
+
+        </div>                cellContent = '&nbsp;';
+
+        <div class="mt-2">            }
+
+            <small class="text-muted">            
+
+                <span class="badge bg-warning">Yellow</span> = Placeholders that can be filled            html += `<td class="${cellClass}" style="${cellStyle}" title="${cell.address}">${cellContent}</td>`;
+
+            </small>        });
+
+        </div>        
+
+    `;        html += '</tr>';
+
+        });
+
+    $('#previewContent').html(html);    
+
+}    html += `
+
+            </table>
+
+function fillTemplateFromPreview() {        </div>
+
+    $('#previewTemplateModal').modal('hide');        <div class="mt-3">
+
+    $('#fillTemplateModal').modal('show');            <div class="row">
+
+}                <div class="col-md-6">
+
+                    <small class="text-muted">
+
+function previewFillTemplate() {                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHA8ZmlsbD0iIzZjNzU3ZCIvPgo8L3N2Zz4K" class="me-1" style="width:14px;height:14px;">
+
+    const formData = {};                        Xem trước này hiển thị template chính xác như khi in từ Excel.
+
+    $('#fillTemplateForm input').each(function() {                    </small>
+
+        formData[$(this).attr('name')] = $(this).val();                </div>
+
+    });                <div class="col-md-6 text-end">
+
+                        <small class="text-muted">
+
+    const templateName = '{{ template.display_name }}';                        <span class="badge bg-warning"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHA8ZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K" style="width:12px;height:12px;"> Placeholder</span> = Trường có thể điền dữ liệu
+
+                        </small>
+
+    $('#previewFillModal').modal('show');                </div>
+
+    $('#previewFillTemplateName').text(templateName);            </div>
+
+            </div>
+
+    $.ajax({    `;
+
+        url: `/templates/api/${encodeURIComponent(templateName)}/preview-fill`,    
+
+        method: 'POST',    $('#previewContent').html(html);
+
+        contentType: 'application/json',}
+
+        data: JSON.stringify(formData)
+
+    })function fillTemplateFromPreview() {
+
+    .done(function(data) {    $('#previewTemplateModal').modal('hide');
+
+        if (data.success) {    $('#fillTemplateModal').modal('show');
+
+            renderPreviewFillTable(data);}
+
+        } else {
+
+            $('#previewFillContent').html(`<div class="alert alert-danger">${data.message}</div>`);function previewFillTemplate() {
+
+        }    const formData = {};
+
+    })    $('#fillTemplateForm input').each(function() {
+
+    .fail(function() {        formData[$(this).attr('name')] = $(this).val();
+
+        $('#previewFillContent').html('<div class="alert alert-danger">Failed to load preview</div>');    });
+
+    });    
+
+}    const templateName = '{{ template.display_name }}';
+
+    
+
+function renderPreviewFillTable(data) {    // Show preview with filled data modal
+
+    let html = `    $('#previewFillModal').modal('show');
+
+        <div class="mb-3">    $('#previewFillTemplateName').text(templateName);
+
+            <small class="text-muted">    
+
+                Sheet: ${data.sheet_name} | Total: ${data.total_rows} rows × ${data.total_cols} columns    $.ajax({
+
+            </small>        url: `/templates/api/${encodeURIComponent(templateName)}/preview-fill`,
+
+        </div>        method: 'POST',
+
+        <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">        contentType: 'application/json',
+
+            <table class="table table-sm table-bordered">        data: JSON.stringify(formData)
+
+    `;    })
+
+        .done(function(data) {
+
+    data.preview_data.forEach(function(row, rowIndex) {        if (data.success) {
+
+        html += '<tr>';            renderPreviewFillTable(data);
+
+        row.forEach(function(cell, colIndex) {        } else {
+
+            let cellClass = '';            $('#previewFillContent').html(`<div class="alert alert-danger">${data.message}</div>`);
+
+            let cellValue = cell.filled;        }
+
+                })
+
+            if (cell.is_changed) {    .fail(function() {
+
+                cellClass = 'table-success fw-bold';        $('#previewFillContent').html('<div class="alert alert-danger">Không thể tải xem trước</div>');
+
+            }    });
+
+            }
+
+            html += `<td class="${cellClass}" title="${cell.address}">${cellValue}</td>`;
+
+        });function renderPreviewFillTable(data) {
+
+        html += '</tr>';    let html = `
+
+    });        <div class="mb-3">
+
+                <small class="text-muted">
+
+    html += `                Sheet: ${data.sheet_name} | Tổng: ${data.total_rows} rows × ${data.total_cols} columns
+
+            </table>            </small>
+
+        </div>        </div>
+
+        <div class="mt-2">        <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
+
+            <small class="text-muted">            <table class="table table-sm table-bordered">
+
+                <span class="badge bg-success">Green</span> = Fields filled with your data    `;
+
+            </small>    
+
+        </div>    data.preview_data.forEach(function(row, rowIndex) {
+
+    `;        html += '<tr>';
+
+            row.forEach(function(cell, colIndex) {
+
+    $('#previewFillContent').html(html);            let cellClass = '';
+
+}            let cellValue = cell.filled;
+
+            
+
+function fillTemplateFromFillPreview() {            if (cell.is_changed) {
+
+    $('#previewFillModal').modal('hide');                cellClass = 'table-success fw-bold';
+
+    fillTemplate();                cellValue = `${cell.filled}`;
+
+}            }
+
+</script>            
+
+{% endblock %}            html += `<td class="${cellClass}" title="${cell.address}${cell.is_changed ? ' (Thay đổi từ: ' + cell.original + ')' : ''}">${cellValue}</td>`;
+        });
+        html += '</tr>';
+    });
+    
+    html += `
+            </table>
+        </div>
+        <div class="mt-2">
+            <small class="text-muted">
+                <span class="badge bg-success">Xanh</span> = Trường sẽ được điền với dữ liệu của bạn
+            </small>
+        </div>
+    `;
+    
+    $('#previewFillContent').html(html);
+}
+
+function fillTemplateFromFillPreview() {
+    $('#previewFillModal').modal('hide');
+    // Trigger the actual fill and download
+    fillTemplate();
+}
+</script>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for sheet in template.sheets %}
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-table me-2"></i>{{ sheet }}
+                                                {% if template.is_nike_form and sheet == template.sheet_name %}
+                                                    <span class="badge bg-primary ms-2">Current</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if sheet == 'Data' %}
+                                                    <span class="badge bg-warning">Data Sheet</span>
+                                                {% else %}
+                                                    <span class="badge bg-success">Form Sheet</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if sheet != 'Data' and template.name == 'MergeDataNike.xlsm' %}
+                                                    <a href="{{ url_for('templates.template_detail', template_name=sheet) }}" 
+                                                       class="btn btn-sm btn-outline-primary">View Form</a>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <!-- Placeholders -->
+                    {% if template.placeholders %}
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-tags me-2"></i>Placeholders ({{ template.placeholders|length }})
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                {% for placeholder in template.placeholders %}
+                                <div class="col-md-4 col-sm-6 mb-2">
+                                    <code class="text-primary">{%raw%}{{% endraw%}{{ placeholder }}{%raw%}}{% endraw%}</code>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Actions Sidebar -->
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-cogs me-2"></i>Actions
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-grid gap-2">
+                                <!-- Preview Template -->
+                                <button type="button" class="btn btn-info" onclick="previewTemplate()" id="previewBtn">
+                                    <i class="fas fa-eye me-2"></i>Preview Template
+                                </button>
+                                
+                                <!-- Use Template -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#useTemplateModal">
+                                    <i class="fas fa-play me-2"></i>Use Template
+                                </button>
+                                
+                                <!-- Fill Template -->
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#fillTemplateModal">
+                                    <i class="fas fa-edit me-2"></i>Fill Template
+                                </button>
+                                
+                                <!-- Download Template -->
+                                <a href="{{ url_for('templates.download_original_template', template_name=template.name) }}" class="btn btn-outline-info">
+                                    <i class="fas fa-download me-2"></i>Download Original
+                                </a>
+                                
+                                <!-- Scan Placeholders -->
+                                <button type="button" class="btn btn-outline-secondary" onclick="scanPlaceholders()">
+                                    <i class="fas fa-search me-2"></i>Scan Placeholders
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Validation Results -->
+                    {% if errors or warnings %}
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-exclamation-triangle me-2"></i>Validation
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            {% if errors %}
+                            <div class="alert alert-danger">
+                                <h6>Errors:</h6>
+                                <ul class="mb-0">
+                                    {% for error in errors %}
+                                    <li>{{ error }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
+                            
+                            {% if warnings %}
+                            <div class="alert alert-warning">
+                                <h6>Warnings:</h6>
+                                <ul class="mb-0">
+                                    {% for warning in warnings %}
+                                    <li>{{ warning }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Use Template Modal -->
+<div class="modal fade" id="useTemplateModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Use Template</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Select invoices to apply this template to:</p>
+                <div id="invoiceSelection">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="applyTemplate()">Apply Template</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fill Template Modal -->
+<div class="modal fade" id="fillTemplateModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Fill Template Data</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="fillTemplateForm">
+                    <div class="row" id="placeholderFields">
+                        <div class="col-12 text-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading placeholders...</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-info" onclick="previewFillTemplate()">
+                    <i class="fas fa-eye me-2"></i>Preview
+                </button>
+                <button type="button" class="btn btn-success" onclick="fillTemplate()">Fill & Download</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Test if jQuery and modal are working
+$(document).ready(function() {
+    console.log('Document ready, jQuery version:', $.fn.jquery);
+    console.log('Bootstrap modal available:', typeof $.fn.modal);
+    
+    // Test button click
+    $('#previewBtn').click(function() {
+        console.log('Preview button clicked via jQuery');
+    });
+});
+
+// Load invoices for template application
+$('#useTemplateModal').on('show.bs.modal', function () {
+    $.get('/api/invoices')
+        .done(function(data) {
+            let html = '<div class="form-check-inline">';
+            data.invoices.forEach(function(invoice) {
+                html += `
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" value="${invoice.id}" id="invoice_${invoice.id}">
+                        <label class="form-check-label" for="invoice_${invoice.id}">
+                            ${invoice.invoice_number} (${invoice.status})
+                        </label>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            $('#invoiceSelection').html(html);
+        })
+        .fail(function() {
+            $('#invoiceSelection').html('<div class="alert alert-danger">Failed to load invoices</div>');
+        });
+});
+
+// Load placeholders for template filling
+$('#fillTemplateModal').on('show.bs.modal', function () {
+    const templateName = '{{ template.name }}';
+    const sheetName = '{{ template.sheet_name }}';
+    
+    $.get(`/api/templates/${templateName}/placeholders`)
+        .done(function(data) {
+            let html = '';
+            data.placeholders.forEach(function(placeholder) {
+                html += `
+                    <div class="col-md-6 mb-3">
+                        <label for="field_${placeholder}" class="form-label">${placeholder}</label>
+                        <input type="text" class="form-control" id="field_${placeholder}" name="${placeholder}">
+                    </div>
+                `;
+            });
+            $('#placeholderFields').html(html);
+        })
+        .fail(function() {
+            $('#placeholderFields').html('<div class="alert alert-danger">Failed to load placeholders</div>');
+        });
+});
+
+function applyTemplate() {
+    const selectedInvoices = [];
+    $('input[type="checkbox"]:checked').each(function() {
+        selectedInvoices.push($(this).val());
+    });
+    
+    if (selectedInvoices.length === 0) {
+        alert('Please select at least one invoice');
+        return;
+    }
+    
+    // Apply template to selected invoices
+    const templateName = '{{ template.name }}';
+    const sheetName = '{{ template.sheet_name }}';
+    
+    $.post('/api/templates/apply', {
+        template_name: templateName,
+        sheet_name: sheetName,
+        invoice_ids: selectedInvoices
+    })
+    .done(function(data) {
+        alert('Template applied successfully!');
+        $('#useTemplateModal').modal('hide');
+    })
+    .fail(function() {
+        alert('Failed to apply template');
+    });
+}
+
+function fillTemplate() {
+    const formData = {};
+    $('#fillTemplateForm input').each(function() {
+        formData[$(this).attr('name')] = $(this).val();
+    });
+    
+    const templateName = '{{ template.name }}';
+    const sheetName = '{{ template.sheet_name }}';
+    
+    $.post('/api/templates/fill', {
+        template_name: templateName,
+        sheet_name: sheetName,
+        data: formData
+    })
+    .done(function(data) {
+        if (data.success) {
+            // Download the filled template
+            window.location.href = data.download_url;
+            $('#fillTemplateModal').modal('hide');
+        } else {
+            alert('Failed to fill template: ' + data.message);
+        }
+    })
+    .fail(function() {
+        alert('Failed to fill template');
+    });
+}
+
+function scanPlaceholders() {
+    const templateName = '{{ template.name }}';
+    
+    $.get(`/api/templates/${templateName}/placeholders`)
+        .done(function(data) {
+            alert(`Found ${data.placeholders.length} placeholders:\n${data.placeholders.join(', ')}`);
+        })
+        .fail(function() {
+            alert('Failed to scan placeholders');
+        });
+}
+
+function previewTemplate() {
+    console.log('previewTemplate called');
+    alert('Preview Template clicked!'); // Test alert
+    
+    const templateName = '{{ template.display_name }}';
+    console.log('Template name:', templateName);
+    
+    // Debug modal 
+    console.log('Modal element exists:', $('#previewTemplateModal').length);
+    console.log('Bootstrap modal method available:', typeof $('#previewTemplateModal').modal);
+    
+    // Show modal
+    $('#previewTemplateModal').modal('show');
+    $('#previewTemplateName').text(templateName);
+    
+    console.log('Modal show() called');
+    
+    // Load preview data
+    const previewUrl = `/templates/preview/${encodeURIComponent(templateName)}`;
+    console.log('Preview URL:', previewUrl);
+    
+    $.get(previewUrl)
+        .done(function(data) {
+            console.log('Preview data received:', data);
+            if (data.success) {
+                renderPreviewTable(data);
+            } else {
+                $('#previewContent').html(`<div class="alert alert-danger">${data.message}</div>`);
+            }
+        })
+        .fail(function(xhr, status, error) {
+            console.error('Preview request failed:', status, error);
+            $('#previewContent').html('<div class="alert alert-danger">Failed to load preview</div>');
+        });
+}
+
+function renderPreviewTable(data) {
+    let html = `
+        <div class="mb-3">
+            <small class="text-muted">
+                Sheet: ${data.sheet_name} | Rows: ${data.total_rows} | Columns: ${data.total_cols}
+            </small>
+        </div>
+        <div class="excel-preview-container" style="
+            max-height: 80vh; 
+            overflow: auto; 
+            background: white; 
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        ">
+            <table class="excel-table" style="
+                border-collapse: collapse; 
+                width: 100%; 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 11px;
+                background: white;
+            ">
+    `;
+    
+    data.preview_data.forEach(function(row, rowIndex) {
+        html += '<tr>';
+        
+        row.forEach(function(cell, colIndex) {
+            // Build cell style based on Excel formatting
+            let cellStyle = 'padding: 2px 4px; border: 1px solid #e0e0e0; vertical-align: top;';
+            
+            if (cell.style) {
+                // Font styling
+                if (cell.style.font_bold) {
+                    cellStyle += 'font-weight: bold;';
+                }
+                
+                if (cell.style.font_size && cell.style.font_size !== 11) {
+                    cellStyle += `font-size: ${cell.style.font_size}px;`;
+                }
+                
+                // Background color
+                if (cell.style.bg_color && cell.style.bg_color !== 'FFFFFF') {
+                    cellStyle += `background-color: #${cell.style.bg_color};`;
+                }
+                
+                // Text alignment
+                if (cell.style.alignment && cell.style.alignment !== 'general') {
+                    cellStyle += `text-align: ${cell.style.alignment};`;
+                }
+                
+                // Border styling
+                if (cell.style.border) {
+                    cellStyle += 'border: 1px solid #333;';
+                }
+                
+                // Merged cell handling
+                if (cell.style.merged) {
+                    // Skip rendering merged cells that are not the top-left
+                    if (cell.style.merge_range) {
+                        let range = cell.style.merge_range;
+                        // Simple merge detection - could be enhanced
+                        cellStyle += 'border: 2px solid #666;';
+                    }
+                }
+            }
+            
+            // Highlight placeholders
+            let cellClass = '';
+            let cellContent = cell.value;
+            
+            if (cell.is_placeholder) {
+                cellClass = 'placeholder-cell';
+                cellStyle += 'background-color: #fff3cd !important; border: 2px solid #ffc107 !important; font-weight: bold;';
+                cellContent = `<span style="color: #856404;">${cell.value}</span>`;
+            }
+            
+            // Handle empty cells
+            if (!cell.value || cell.value.trim() === '') {
+                cellContent = '&nbsp;';
+            }
+            
+            html += `<td class="${cellClass}" style="${cellStyle}" title="${cell.address}">${cellContent}</td>`;
+        });
+        
+        html += '</tr>';
+    });
+    
+    html += `
+            </table>
+        </div>
+        <div class="mt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <small class="text-muted">
+                        <i class="fas fa-info-circle"></i> 
+                        This preview shows the template exactly as it would appear when printed from Excel.
+                    </small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small class="text-muted">
+                        <span class="badge bg-warning"><i class="fas fa-edit"></i> Placeholder</span> = Fields that can be filled with data
+                    </small>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    $('#previewContent').html(html);
+}
+
+function fillTemplateFromPreview() {
+    $('#previewTemplateModal').modal('hide');
+    $('#fillTemplateModal').modal('show');
+}
+
+function previewFillTemplate() {
+    const formData = {};
+    $('#fillTemplateForm input').each(function() {
+        formData[$(this).attr('name')] = $(this).val();
+    });
+    
+    const templateName = '{{ template.display_name }}';
+    
+    // Show preview with filled data modal
+    $('#previewFillModal').modal('show');
+    $('#previewFillTemplateName').text(templateName);
+    
+    $.ajax({
+        url: `/templates/api/${encodeURIComponent(templateName)}/preview-fill`,
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(formData)
+    })
+    .done(function(data) {
+        if (data.success) {
+            renderPreviewFillTable(data);
+        } else {
+            $('#previewFillContent').html(`<div class="alert alert-danger">${data.message}</div>`);
+        }
+    })
+    .fail(function() {
+        $('#previewFillContent').html('<div class="alert alert-danger">Failed to load preview</div>');
+    });
+}
+
+function renderPreviewFillTable(data) {
+    let html = `
+        <div class="mb-3">
+            <small class="text-muted">
+                Sheet: ${data.sheet_name} | Total: ${data.total_rows} rows × ${data.total_cols} columns
+            </small>
+        </div>
+        <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
+            <table class="table table-sm table-bordered">
+    `;
+    
+    data.preview_data.forEach(function(row, rowIndex) {
+        html += '<tr>';
+        row.forEach(function(cell, colIndex) {
+            let cellClass = '';
+            let cellValue = cell.filled;
+            
+            if (cell.is_changed) {
+                cellClass = 'table-success fw-bold';
+                cellValue = `${cell.filled}`;
+            }
+            
+            html += `<td class="${cellClass}" title="${cell.address}${cell.is_changed ? ' (Changed from: ' + cell.original + ')' : ''}">${cellValue}</td>`;
+        });
+        html += '</tr>';
+    });
+    
+    html += `
+            </table>
+        </div>
+        <div class="mt-2">
+            <small class="text-muted">
+                <span class="badge bg-success">Green</span> = Fields that will be filled with your data
+            </small>
+        </div>
+    `;
+    
+    $('#previewFillContent').html(html);
+}
+
+function fillTemplateFromFillPreview() {
+    $('#previewFillModal').modal('hide');
+    // Trigger the actual fill and download
+    fillTemplate();
+}
+</script>
+
+<!-- Preview Template Modal -->
+<div class="modal fade" id="previewTemplateModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Template Preview - <span id="previewTemplateName"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="previewContent">
+                    <div class="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading preview...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="fillTemplateFromPreview()">
+                    <i class="fas fa-edit me-2"></i>Fill This Template
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Preview Fill Template Modal -->
+<div class="modal fade" id="previewFillModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Preview Filled Template - <span id="previewFillTemplateName"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="previewFillContent">
+                    <div class="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading preview...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning" onclick="$('#previewFillModal').modal('hide'); $('#fillTemplateModal').modal('show');">
+                    <i class="fas fa-edit me-2"></i>Edit Data
+                </button>
+                <button type="button" class="btn btn-success" onclick="fillTemplateFromFillPreview()">
+                    <i class="fas fa-download me-2"></i>Generate & Download
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

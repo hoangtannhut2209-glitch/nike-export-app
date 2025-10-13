@@ -1,0 +1,1174 @@
+{% extends "base.html" %}
+
+{% block title %}Nike Export Templates{% endblock %}
+
+{% block head %}
+<style>
+    /* Nike Professional Design System */
+    :root {
+        --nike-primary: #ff6b00;
+        --nike-secondary: #000000;
+        --nike-accent: #ff0080;
+        --nike-success: #00c851;
+        --nike-warning: #ffbb33;
+        --nike-danger: #ff4444;
+        --nike-dark: #212529;
+        --nike-light: #f8f9fa;
+        --nike-gradient-primary: linear-gradient(135deg, #ff6b00 0%, #ff8c42 100%);
+        --nike-gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --nike-gradient-accent: linear-gradient(135deg, #ff0080 0%, #ff4081 100%);
+        --nike-shadow: 0 8px 32px rgba(255, 107, 0, 0.15);
+        --nike-shadow-hover: 0 12px 40px rgba(255, 107, 0, 0.25);
+        --nike-border-radius: 20px;
+        --nike-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    .dashboard-header {
+        background: linear-gradient(135deg, rgba(255, 107, 0, 0.9) 0%, rgba(255, 140, 66, 0.9) 100%);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 4rem 0;
+        margin-bottom: 3rem;
+        border-radius: 0 0 50px 50px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .dashboard-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        opacity: 0.3;
+    }
+    
+    .dashboard-header h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .dashboard-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        position: relative;
+        z-index: 2;
+        font-weight: 300;
+    }
+    
+    .template-card {
+        border: none;
+        border-radius: var(--nike-border-radius);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: var(--nike-shadow);
+        transition: var(--nike-transition);
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .template-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--nike-gradient-primary);
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+    }
+    
+    .template-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: var(--nike-shadow-hover);
+        background: rgba(255, 255, 255, 1);
+    }
+    
+    .template-card:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .template-header {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 249, 250, 0.8) 100%);
+        backdrop-filter: blur(10px);
+        border-radius: var(--nike-border-radius) var(--nike-border-radius) 0 0;
+        padding: 2rem;
+        border-bottom: 1px solid rgba(233, 236, 239, 0.3);
+        position: relative;
+    }
+    
+    .template-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--nike-dark);
+        margin-bottom: 0.8rem;
+        letter-spacing: -0.02em;
+    }
+    
+    .template-type {
+        font-size: 0.9rem;
+    }
+    
+    .template-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 1rem;
+    }
+    
+    .template-icon-wrapper {
+        min-width: 70px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .template-icon-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        background: radial-gradient(circle, rgba(255, 107, 0, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: -1;
+    }
+    
+    .nike-badge {
+        background: var(--nike-gradient-primary) !important;
+        color: white;
+        font-weight: 600;
+        padding: 0.6rem 1rem;
+        border-radius: 25px;
+        font-size: 0.85rem;
+        box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        border: none;
+    }
+    
+    .template-badge {
+        background: var(--nike-gradient-secondary) !important;
+        color: white;
+        font-weight: 600;
+        padding: 0.6rem 1rem;
+        border-radius: 25px;
+        font-size: 0.85rem;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        border: none;
+    }
+    
+    .template-badge {
+        background: linear-gradient(45deg, #95a5a6, #7f8c8d) !important;
+        color: white;
+        font-weight: 500;
+        padding: 0.5rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+    }
+    
+    .template-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+    
+    .template-type {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+    
+    .template-body {
+        padding: 1.5rem;
+    }
+    
+    .template-body {
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    
+    .stat-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        transition: var(--nike-transition);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .stat-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: var(--nike-gradient-primary);
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .stat-item:hover {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 249, 250, 1) 100%);
+        transform: translateX(5px);
+        box-shadow: 0 4px 20px rgba(255, 107, 0, 0.1);
+    }
+    
+    .stat-item:hover::before {
+        transform: scaleY(1);
+    }
+    
+    .stat-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.75rem;
+        flex-shrink: 0;
+    }
+    
+    .stat-label {
+        font-weight: 600;
+        color: var(--nike-dark);
+        min-width: 90px;
+        font-size: 0.9rem;
+    }
+    
+    .stat-value {
+        color: #6c757d;
+        flex-grow: 1;
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+    
+    .placeholder-preview {
+        max-height: 150px;
+        overflow-y: auto;
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, rgba(255, 107, 0, 0.05) 0%, rgba(102, 126, 234, 0.05) 100%);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 107, 0, 0.1);
+    }
+    
+    .placeholder-preview::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .placeholder-preview::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 3px;
+    }
+    
+    .placeholder-preview::-webkit-scrollbar-thumb {
+        background: var(--nike-gradient-primary);
+        border-radius: 3px;
+    }
+    
+    .placeholder-badge {
+        display: inline-block;
+        background: var(--nike-gradient-primary);
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        margin: 0.3rem 0.3rem 0.3rem 0;
+        font-weight: 600;
+        box-shadow: 0 3px 8px rgba(255, 107, 0, 0.3);
+        transition: var(--nike-transition);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .placeholder-badge::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.6s;
+    }
+    
+    .placeholder-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(255, 107, 0, 0.4);
+    }
+    
+    .placeholder-badge:hover::before {
+        left: 100%;
+    }
+    
+    .action-buttons {
+        padding: 2rem;
+        background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(233, 236, 239, 0.8) 100%);
+        backdrop-filter: blur(10px);
+        border-radius: 0 0 var(--nike-border-radius) var(--nike-border-radius);
+        border-top: 1px solid rgba(233, 236, 239, 0.3);
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+    
+    .btn-action {
+        border-radius: 12px;
+        font-weight: 600;
+        padding: 0.8rem 1.5rem;
+        transition: var(--nike-transition);
+        position: relative;
+        overflow: hidden;
+        border: none;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 140px;
+    }
+    
+    .btn-action::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.6s ease;
+    }
+    
+    .btn-action:hover::before {
+        left: 100%;
+    }
+    
+    .btn-preview {
+        background: var(--nike-gradient-primary);
+        color: white;
+        box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+    }
+    
+    .btn-preview:hover {
+        background: linear-gradient(135deg, #e55a00 0%, #ff8c42 100%);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+    }
+    
+    .btn-use {
+        background: var(--nike-gradient-accent);
+        color: white;
+        box-shadow: 0 4px 15px rgba(255, 0, 128, 0.3);
+    }
+    
+    .btn-use:hover {
+        background: linear-gradient(135deg, #e60070 0%, #ff4081 100%);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255, 0, 128, 0.4);
+    }
+    
+    .btn-outline-info {
+        background: transparent;
+        color: var(--nike-primary);
+        border: 2px solid var(--nike-primary);
+        box-shadow: 0 2px 10px rgba(255, 107, 0, 0.1);
+    }
+    
+    .btn-outline-info:hover {
+        background: var(--nike-primary);
+        color: white;
+        border-color: var(--nike-primary);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(255, 107, 0, 0.3);
+    }
+    
+    .upload-btn {
+        background: var(--nike-gradient-secondary);
+        border: none;
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: var(--nike-transition);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .upload-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.6s ease;
+    }
+    
+    .upload-btn:hover {
+        background: linear-gradient(135deg, #5a6fd8 0%, #6b73db 100%);
+        color: white;
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    }
+    
+    .upload-btn:hover::before {
+        left: 100%;
+    }
+    
+    .no-templates {
+        text-align: center;
+        padding: 5rem 2rem;
+        color: #6c757d;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: var(--nike-border-radius);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 2rem 0;
+    }
+    
+    .display-icon {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+    
+    .display-icon i {
+        background: var(--nike-gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 2px 4px rgba(255, 107, 0, 0.3));
+    }
+    
+    /* Advanced Responsive Design */
+    @media (max-width: 1200px) {
+        .template-card {
+            margin-bottom: 1.5rem;
+        }
+        
+        .action-buttons {
+            padding: 1.5rem;
+        }
+        
+        .btn-action {
+            min-width: 120px;
+            padding: 0.7rem 1.2rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .dashboard-header {
+            padding: 2.5rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 30px 30px;
+        }
+        
+        .dashboard-header h1 {
+            font-size: 2.5rem;
+        }
+        
+        .dashboard-header p {
+            font-size: 1rem;
+        }
+        
+        .template-card {
+            margin-bottom: 1.5rem;
+        }
+        
+        .template-header {
+            padding: 1.5rem;
+        }
+        
+        .template-body {
+            padding: 1.5rem;
+        }
+        
+        .template-icon-wrapper {
+            min-width: 60px;
+        }
+        
+        .template-icon-wrapper i {
+            font-size: 2rem !important;
+        }
+        
+        .template-title {
+            font-size: 1.2rem;
+        }
+        
+        .stat-item {
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .action-buttons {
+            padding: 1.5rem;
+            flex-direction: column;
+        }
+        
+        .btn-action {
+            margin-bottom: 0.5rem;
+            width: 100%;
+            min-width: auto;
+        }
+        
+        .placeholder-preview {
+            max-height: 120px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .dashboard-header h1 {
+            font-size: 2rem;
+        }
+        
+        .template-header {
+            padding: 1rem;
+        }
+        
+        .template-body {
+            padding: 1rem;
+        }
+        
+        .action-buttons {
+            padding: 1rem;
+        }
+        
+        .no-templates {
+            padding: 3rem 1rem;
+        }
+    }
+    
+    /* Advanced Animation System */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    }
+    
+    @keyframes glow {
+        0%, 100% {
+            box-shadow: 0 0 5px rgba(255, 107, 0, 0.3);
+        }
+        50% {
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.6);
+        }
+    }
+    
+    .template-card {
+        animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    .template-card:nth-child(1) { animation-delay: 0.1s; }
+    .template-card:nth-child(2) { animation-delay: 0.2s; }
+    .template-card:nth-child(3) { animation-delay: 0.3s; }
+    .template-card:nth-child(4) { animation-delay: 0.4s; }
+    .template-card:nth-child(5) { animation-delay: 0.5s; }
+    .template-card:nth-child(6) { animation-delay: 0.6s; }
+    
+    .stat-item {
+        animation: slideInRight 0.6s ease forwards;
+    }
+    
+    .stat-item:nth-child(1) { animation-delay: 0.7s; }
+    .stat-item:nth-child(2) { animation-delay: 0.8s; }
+    .stat-item:nth-child(3) { animation-delay: 0.9s; }
+    .stat-item:nth-child(4) { animation-delay: 1.0s; }
+    
+    .nike-badge:hover {
+        animation: pulse 0.6s ease-in-out;
+    }
+    
+    .upload-btn:focus {
+        animation: glow 2s ease-in-out infinite;
+    }
+    
+    /* Dark Mode Styles */
+    .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        padding: 0.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: var(--nike-transition);
+    }
+    
+    .theme-toggle:hover {
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .theme-toggle-btn {
+        background: var(--nike-gradient-primary);
+        border: none;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: var(--nike-transition);
+        cursor: pointer;
+    }
+    
+    .theme-toggle-btn:hover {
+        transform: rotate(180deg) scale(1.1);
+        background: linear-gradient(135deg, #e55a00 0%, #ff8c42 100%);
+    }
+    
+    /* Dark Theme */
+    [data-theme="dark"] {
+        --nike-dark: #ffffff;
+        --nike-light: #1a1a1a;
+    }
+    
+    [data-theme="dark"] body {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: white;
+    }
+    
+    [data-theme="dark"] .dashboard-header {
+        background: linear-gradient(135deg, rgba(255, 107, 0, 0.8) 0%, rgba(255, 140, 66, 0.8) 100%);
+    }
+    
+    [data-theme="dark"] .template-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    [data-theme="dark"] .template-card:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    
+    [data-theme="dark"] .template-header {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(248, 249, 250, 0.1) 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    [data-theme="dark"] .template-body {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    [data-theme="dark"] .stat-item {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(248, 249, 250, 0.1) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    [data-theme="dark"] .stat-item:hover {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(248, 249, 250, 0.15) 100%);
+    }
+    
+    [data-theme="dark"] .action-buttons {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(233, 236, 239, 0.05) 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    [data-theme="dark"] .no-templates {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    [data-theme="dark"] .theme-toggle {
+        background: rgba(0, 0, 0, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    [data-theme="dark"] .theme-toggle:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+    
+    /* Loading spinner for page */
+    .page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+    
+    .page-loader.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .loader-content {
+        text-align: center;
+        color: #667eea;
+    }
+    
+    .spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #667eea;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1rem;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .no-templates .display-icon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.5;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Theme Toggle -->
+<div class="theme-toggle">
+    <button class="theme-toggle-btn" onclick="toggleTheme()" title="Chuyển đổi chế độ sáng/tối">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+</div>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <div class="spinner"></div>
+        <h5><i class="fas fa-file-excel me-2"></i>Đang tải Nike Templates...</h5>
+        <p class="text-muted">Vui lòng đợi trong giây lát</p>
+    </div>
+</div>
+
+<!-- Dashboard Header -->
+<div class="dashboard-header text-center">
+    <div class="container">
+        <h1 class="mb-2">
+            <i class="fas fa-file-spreadsheet me-3" style="font-size: 2rem;"></i>
+            Nike Export Templates
+        </h1>
+        <p class="lead mb-4">Quản lý và sử dụng các template xuất khẩu Nike</p>
+        <button class="btn upload-btn" data-bs-toggle="modal" data-bs-target="#uploadModal">
+            <i class="fas fa-cloud-upload-alt me-2"></i>
+            Tải lên Template mới
+        </button>
+    </div>
+</div>
+
+<div class="container">
+    {% if templates %}
+    <div class="row">
+        {% for template in templates %}
+        <div class="col-xl-4 col-lg-6 mb-4">
+            <div class="template-card">
+                <!-- Template Header -->
+                <div class="template-header">
+                    <div class="d-flex align-items-center">
+                        <div class="template-icon-wrapper me-3">
+                            {% if template.is_nike_form %}
+                                <i class="fas fa-file-contract" style="font-size: 2.5rem; color: #e74c3c;"></i>
+                            {% else %}
+                                <i class="fas fa-file-excel" style="font-size: 2.5rem; color: #27ae60;"></i>
+                            {% endif %}
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="template-title">{{ template.display_name }}</div>
+                            <div class="template-type">
+                                {% if template.is_nike_form %}
+                                    <span class="badge nike-badge">
+                                        <i class="fas fa-shield-alt me-1"></i>Nike Form
+                                    </span>
+                                {% else %}
+                                    <span class="badge template-badge">
+                                        <i class="fas fa-file me-1"></i>Template
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Body -->
+                <div class="template-body">
+                    <div class="stat-item">
+                        <i class="fas fa-hdd text-primary me-3"></i>
+                        <div class="stat-label">Kích thước:</div>
+                        <div class="stat-value">{{ template.size|filesizeformat if template.size else 'N/A' }}</div>
+                    </div>
+                    
+                    {% if template.is_nike_form %}
+                    <div class="stat-item">
+                        <i class="fas fa-layer-group text-success me-3"></i>
+                        <div class="stat-label">Sheet:</div>
+                        <div class="stat-value">{{ template.sheet_name }}</div>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="stat-item">
+                        <i class="fas fa-tags text-danger me-3"></i>
+                        <div class="stat-label">Trường:</div>
+                        <div class="stat-value">{{ template.placeholders|length if template.placeholders else 0 }}</div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <i class="fas fa-clock text-warning me-3"></i>
+                        <div class="stat-label">Cập nhật:</div>
+                        <div class="stat-value">{{ template.modified.strftime('%d/%m/%Y') if template.modified else 'N/A' }}</div>
+                    </div>
+                    
+                    <!-- Placeholder Preview -->
+                    {% if template.placeholders %}
+                    <div class="placeholder-preview">
+                        <small class="text-muted fw-bold">Trường dữ liệu:</small>
+                        <div class="mt-2">
+                            {% for placeholder in template.placeholders[:10] %}
+                            <span class="placeholder-badge">{%raw%}{%endraw%}{{ placeholder }}{%raw%}}{%endraw%}</span>
+                            {% endfor %}
+                            {% if template.placeholders|length > 10 %}
+                            <span class="text-muted">+{{ template.placeholders|length - 10 }} more...</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <a href="{{ url_for('templates.template_detail', template_name=template.name) }}" 
+                       class="btn btn-preview btn-action">
+                        <i class="fas fa-search me-2"></i>
+                        Xem Chi tiết
+                    </a>
+                    
+                    <button class="btn btn-use btn-action" onclick="useTemplate('{{ template.name }}')">
+                        <i class="fas fa-magic me-2"></i>
+                        Sử dụng
+                    </button>
+                    
+                    {% if template.is_nike_form %}
+                    <button class="btn btn-outline-info btn-action" onclick="previewTemplate('{{ template.name }}', '{{ template.sheet_name }}')">
+                        <i class="fas fa-eye me-2"></i>
+                        Xem trước
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="no-templates">
+        <div class="display-icon">
+            <i class="fas fa-file-excel" style="font-size: 4rem; color: #6c757d; opacity: 0.5;"></i>
+        </div>
+        <h4 class="mt-3">Chưa có Template nào</h4>
+        <p class="text-muted">Tải lên template Excel đầu tiên để bắt đầu.</p>
+        <button class="btn upload-btn" data-bs-toggle="modal" data-bs-target="#uploadModal">
+            <i class="fas fa-cloud-upload-alt me-2"></i>
+            Tải lên Template
+        </button>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Upload Modal -->
+<div class="modal fade" id="uploadModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tải lên Template</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="uploadTemplateForm" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="templateFile" class="form-label">File Excel Template</label>
+                        <input type="file" class="form-control" id="templateFile" 
+                               name="template_file" accept=".xlsx,.xlsm,.xls" required>
+                        <div class="form-text">
+                            Định dạng hỗ trợ: .xlsx, .xlsm, .xls<br>
+                            Sử dụng placeholders như {Invoice Number}, {Date}, v.v.
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <h6><i class="fas fa-info-circle me-2"></i>Hướng dẫn Template:</h6>
+                        <ul class="mb-0">
+                            <li>Sử dụng dấu ngoặc nhọn cho placeholders: {Tên Trường}</li>
+                            <li>Trường thông dụng: {Invoice Number}, {Date}, {Marks}, {Total Cartons}</li>
+                            <li>Trường đặc biệt: {Total Cartons In Words}, {DEST}, {DESCRIPTION}</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-primary" onclick="uploadTemplate()">
+                    <i class="fas fa-upload me-2"></i>
+                    Tải lên
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function useTemplate(templateName) {
+    // Redirect to generate form with template pre-selected
+    window.location.href = `/templates/generate?template=${encodeURIComponent(templateName)}`;
+}
+
+function uploadTemplate() {
+    const form = document.getElementById('uploadTemplateForm');
+    const formData = new FormData(form);
+    const fileInput = document.getElementById('templateFile');
+    
+    if (!fileInput.files[0]) {
+        alert('Vui lòng chọn file');
+        return;
+    }
+    
+    // Show loading
+    const uploadBtn = document.querySelector('#uploadModal .btn-primary');
+    const originalText = uploadBtn.innerHTML;
+    uploadBtn.disabled = true;
+    uploadBtn.innerHTML = '<i class="spinner-border spinner-border-sm me-2"></i> Đang tải lên...';
+    
+    fetch('/templates/api/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Template đã được tải lên thành công!');
+            
+            // Close modal and reload page
+            const modal = bootstrap.Modal.getInstance(document.getElementById('uploadModal'));
+            modal.hide();
+            setTimeout(() => window.location.reload(), 1000);
+        } else {
+            alert('Lỗi: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Upload error:', error);
+        alert('Tải lên thất bại: ' + error.message);
+    })
+    .finally(() => {
+        uploadBtn.disabled = false;
+        uploadBtn.innerHTML = originalText;
+    });
+}
+
+function useTemplate(templateName) {
+    // Show loading notification
+    const notification = document.createElement('div');
+    notification.className = 'alert alert-info alert-dismissible fade show position-fixed';
+    notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+    notification.innerHTML = `
+        <i class="fas fa-magic me-2"></i>
+        Đang chuẩn bị template "${templateName}"...
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    document.body.appendChild(notification);
+    
+    // Navigate to template detail page
+    setTimeout(() => {
+        window.location.href = `/templates/detail/${encodeURIComponent(templateName)}`;
+    }, 1500);
+}
+
+function previewTemplate(templateName, sheetName) {
+    // Show loading modal
+    const loadingModal = new bootstrap.Modal(document.createElement('div'));
+    
+    // Show notification
+    const notification = document.createElement('div');
+    notification.className = 'alert alert-primary alert-dismissible fade show position-fixed';
+    notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+    notification.innerHTML = `
+        <i class="fas fa-eye me-2"></i>
+        Đang tải preview cho "${sheetName}"...
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    document.body.appendChild(notification);
+    
+    // Navigate to preview
+    setTimeout(() => {
+        window.location.href = `/templates/detail/${encodeURIComponent(templateName)}?sheet=${encodeURIComponent(sheetName)}`;
+    }, 1000);
+}
+
+// Reset form when modal is closed
+document.getElementById('uploadModal').addEventListener('hidden.bs.modal', function() {
+    document.getElementById('uploadTemplateForm').reset();
+});
+
+// Hide page loader when content is ready
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        const loader = document.getElementById('pageLoader');
+        if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.remove(), 500);
+        }
+    }, 1000);
+});
+
+// Add smooth scroll behavior
+document.documentElement.style.scrollBehavior = 'smooth';
+
+// Theme Toggle Functionality
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const themeIcon = document.getElementById('themeIcon');
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('nike-theme', newTheme);
+    
+    // Update icon
+    if (newTheme === 'dark') {
+        themeIcon.className = 'fas fa-sun';
+    } else {
+        themeIcon.className = 'fas fa-moon';
+    }
+    
+    // Add transition effect
+    document.body.style.transition = 'all 0.3s ease';
+    setTimeout(() => {
+        document.body.style.transition = '';
+    }, 300);
+}
+
+// Load saved theme on page load
+function loadTheme() {
+    const savedTheme = localStorage.getItem('nike-theme') || 'light';
+    const themeIcon = document.getElementById('themeIcon');
+    
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    if (savedTheme === 'dark') {
+        themeIcon.className = 'fas fa-sun';
+    } else {
+        themeIcon.className = 'fas fa-moon';
+    }
+}
+
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadTheme();
+    
+    // Hide loader
+    setTimeout(() => {
+        const loader = document.getElementById('pageLoader');
+        if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.remove(), 500);
+        }
+    }, 1000);
+});
+
+// Add Easter Egg: Konami Code for special Nike animation
+let konamiCode = [];
+const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+
+document.addEventListener('keydown', function(e) {
+    konamiCode.push(e.keyCode);
+    if (konamiCode.length > konamiSequence.length) {
+        konamiCode.shift();
+    }
+    
+    if (konamiCode.length === konamiSequence.length && 
+        konamiCode.every((code, index) => code === konamiSequence[index])) {
+        
+        // Easter egg activated!
+        document.body.style.animation = 'pulse 0.5s ease-in-out 3';
+        
+        // Show special notification
+        const notification = document.createElement('div');
+        notification.className = 'alert alert-success alert-dismissible fade show position-fixed';
+        notification.style.cssText = 'top: 80px; right: 20px; z-index: 9999; min-width: 300px;';
+        notification.innerHTML = `
+            <i class="fas fa-star me-2"></i>
+            🎉 Nike Secret Mode Activated! Just Do It! 🏃‍♂️
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        document.body.appendChild(notification);
+        
+        // Reset code
+        konamiCode = [];
+        
+        // Remove notification after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 5000);
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Template Detail - Test{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h1>Template Detail Test</h1>
+    
+    <button type="button" class="btn btn-info" onclick="testPreview()" id="testBtn">
+        Test Preview
+    </button>
+    
+    <div id="result"></div>
+</div>
+
+<script>
+function testPreview() {
+    console.log('testPreview called');
+    alert('Test button clicked!');
+    
+    document.getElementById('result').innerHTML = 'Button clicked at ' + new Date();
+    
+    // Test jQuery if available
+    if (typeof $ !== 'undefined') {
+        $('#result').append('<br>jQuery is available');
+        
+        // Test AJAX
+        $.get('/templates/preview/CO_FORM_A.xlsx')
+            .done(function(data) {
+                $('#result').append('<br>AJAX success: ' + JSON.stringify(data).substring(0, 100));
+            })
+            .fail(function() {
+                $('#result').append('<br>AJAX failed');
+            });
+    } else {
+        document.getElementById('result').innerHTML += '<br>jQuery not available';
+    }
+}
+
+// Test on load
+$(document).ready(function() {
+    console.log('Document ready');
+    $('#result').html('Page loaded, jQuery available');
+});
+</script>
+{% endblock %}

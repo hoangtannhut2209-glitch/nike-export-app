@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block title %}Nike Export - Trang chủ{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <!-- Hero Section -->
+        <div class="bg-primary text-white rounded p-5 mb-4">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Nike Export Web App</h1>
+                    <p class="lead">Hệ thống xử lý chứng từ xuất khẩu tự động từ PDF sang Excel/Template</p>
+                    <a href="{{ url_for('main.upload') }}" class="btn btn-light btn-lg">
+                        <i class="bi bi-cloud-upload"></i> Bắt đầu Upload
+                    </a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-file-earmark-arrow-up display-1"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="row mb-5">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-file-pdf display-4 text-danger mb-3"></i>
+                        <h5 class="card-title">PDF Processing</h5>
+                        <p class="card-text">
+                            Tự động trích xuất dữ liệu từ file PL và BOOKING PDF. 
+                            Hỗ trợ nhiều format và layout khác nhau.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-file-earmark-spreadsheet display-4 text-success mb-3"></i>
+                        <h5 class="card-title">Template Management</h5>
+                        <p class="card-text">
+                            Quản lý templates Excel với hệ thống placeholder. 
+                            Tự động điền dữ liệu vào các form CO.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-download display-4 text-primary mb-3"></i>
+                        <h5 class="card-title">Export Options</h5>
+                        <p class="card-text">
+                            Xuất file Excel và PDF với nhiều options. 
+                            Batch processing cho nhiều invoice cùng lúc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="row mb-5">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card bg-info text-white">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase mb-1">Total Invoices</h6>
+                                <h4 class="mb-0" id="stat-invoices">0</h4>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-file-text fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase mb-1">Processed</h6>
+                                <h4 class="mb-0" id="stat-processed">0</h4>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-check-circle fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card bg-warning text-white">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase mb-1">Pending</h6>
+                                <h4 class="mb-0" id="stat-pending">0</h4>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-clock fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase mb-1">Errors</h6>
+                                <h4 class="mb-0" id="stat-errors">0</h4>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-exclamation-triangle fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-clock-history"></i> Hoạt động gần đây
+                </h5>
+            </div>
+            <div class="card-body">
+                <div id="recent-activity">
+                    <div class="text-center text-muted">
+                        <i class="bi bi-info-circle"></i>
+                        Chưa có hoạt động nào. Hãy bắt đầu bằng cách upload file.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Load dashboard statistics
+    loadDashboardStats();
+    loadRecentActivity();
+});
+
+function loadDashboardStats() {
+    fetch('/api/dashboard/stats')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('stat-invoices').textContent = data.stats.total_invoices;
+                document.getElementById('stat-processed').textContent = data.stats.processed;
+                document.getElementById('stat-pending').textContent = data.stats.pending;
+                document.getElementById('stat-errors').textContent = data.stats.errors;
+            }
+        })
+        .catch(error => {
+            console.error('Error loading stats:', error);
+        });
+}
+
+function loadRecentActivity() {
+    fetch('/api/dashboard/recent-activity')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.activities.length > 0) {
+                const container = document.getElementById('recent-activity');
+                container.innerHTML = '';
+                
+                data.activities.forEach(activity => {
+                    const activityEl = document.createElement('div');
+                    activityEl.className = 'border-bottom pb-2 mb-2';
+                    activityEl.innerHTML = `
+                        <div class="d-flex justify-content-between">
+                            <span><strong>${activity.invoice_number}</strong> - ${activity.message}</span>
+                            <small class="text-muted">${activity.timestamp}</small>
+                        </div>
+                    `;
+                    container.appendChild(activityEl);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error loading recent activity:', error);
+        });
+}
+</script>
+{% endblock %}
