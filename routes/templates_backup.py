@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Template routes for Nike Export Web App
+Template routes for Nike Export C/O
 """
 
 from flask import Blueprint, render_template, request, jsonify, send_file, current_app, flash, redirect, url_for
